@@ -1,11 +1,12 @@
-﻿using System;
+﻿using ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database
+namespace QuanLyTTVaQC
 {
     public class QuangCao
     {
@@ -29,7 +30,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database
         /// </summary>
         /// <param name="maLoaiQuangCao"></param>
         /// <param name="anhQC"></param>
-        public static void QuangCao_Inser(int maLoaiQuangCao, string anhQC)
+        public static void QuangCao_Insert(int maLoaiQuangCao, string anhQC)
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_QuangCao] ([MaLoaiQuangCao],[AnhQC]) VALUES(@maLoaiQuangCao,@anhQC)");
             cmd.CommandType = CommandType.Text;
@@ -62,7 +63,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database
         /// Phương thức lấy ra danh sách tất cả quảng cáo
         /// </summary>
         /// <returns></returns>
-        public static DataTable Thongtin_Combo()
+        public static DataTable Thongtin_QuangCao()
         {
             SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[tb_QuangCao]");
             cmd.CommandType = CommandType.Text;
@@ -81,6 +82,20 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database
             SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[tb_QuangCao] WHERE MaLoaiQuangCao=@maLoaiQuangCao");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@maLoaiQuangCao", maLoaiQuangCao);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
+        #region Phương thức lấy ra danh sách thông tin quảng cáo theo mã quảng cáo
+        /// <summary>
+        /// Phương thức lấy ra danh sách thông tin quảng cáo theo mã
+        /// </summary>
+        /// <param name="maQuangCao"></param>
+        /// <returns></returns>
+        public static DataTable Thongtin_QuangCao_by_MaQuangCao(int maQuangCao)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[tb_QuangCao] WHERE MaQuangCao=@maQuangCao");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@maQuangCao", maQuangCao);
             return SQLDatabase.GetData(cmd);
         }
         #endregion

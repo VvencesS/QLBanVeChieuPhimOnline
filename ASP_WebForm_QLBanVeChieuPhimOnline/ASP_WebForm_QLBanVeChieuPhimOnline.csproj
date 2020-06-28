@@ -85,7 +85,6 @@
     <Compile Include="App_Code\database\Combo.cs" />
     <Compile Include="App_Code\database\DatCombo.cs" />
     <Compile Include="App_Code\database\DSVeDat.cs" />
-    <Compile Include="App_Code\database\Ghe.cs" />
     <Compile Include="App_Code\database\QuanLyLichChieu\Ghe.cs" />
     <Compile Include="App_Code\database\QuanLyLichChieu\LoaiGhe.cs" />
     <Compile Include="App_Code\database\QuanLyLichChieu\QuanHuyen.cs" />
@@ -98,14 +97,16 @@
     <Compile Include="App_Code\database\QuanLyPhim\HangPhim.cs" />
     <Compile Include="App_Code\database\QuanLyLichChieu\KhungThoiGian.cs" />
     <Compile Include="App_Code\database\QuanLyLichChieu\LichChieu.cs" />
-    <Compile Include="App_Code\database\LoaiQuangCao.cs" />
+    <Compile Include="App_Code\database\QuanLyTTVaQC\LoaiQuangCao.cs" />
     <Compile Include="App_Code\database\QuanLyPhim\TheLoai.cs" />
     <Compile Include="App_Code\database\QuanLyTaiKhoan\NhanVien.cs" />
     <Compile Include="App_Code\database\QuanLyPhim\Phim.cs" />
     <Compile Include="App_Code\database\QuanLyLichChieu\Phong.cs" />
-    <Compile Include="App_Code\database\QuangCao.cs" />
+    <Compile Include="App_Code\database\QuanLyTTVaQC\LoaiTinTuc.cs" />
+    <Compile Include="App_Code\database\QuanLyTTVaQC\QuangCao.cs" />
     <Compile Include="App_Code\database\QuanLyTaiKhoan\ThanhVien.cs" />
     <Compile Include="App_Code\database\QuanLyPhim\QuocGia.cs" />
+    <Compile Include="App_Code\database\QuanLyTTVaQC\TinTuc.cs" />
     <Compile Include="App_Code\MaHoa.cs" />
     <Compile Include="App_Code\database\SQLDatabase.cs" />
     <Compile Include="Default.aspx.cs">
@@ -138,7 +139,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\database\QuanLyDatVe\" />
-    <Folder Include="App_Code\database\QuanLyTTVaQC\" />
     <Folder Include="cms\" />
   </ItemGroup>
   <PropertyGroup>
