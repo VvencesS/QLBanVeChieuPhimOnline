@@ -82,9 +82,14 @@
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\database\BaoGia.cs" />
-    <Compile Include="App_Code\database\Combo.cs" />
-    <Compile Include="App_Code\database\DatCombo.cs" />
+    <Compile Include="App_Code\database\QuanLyDatVe\BaoGia.cs" />
+    <Compile Include="App_Code\database\QuanLyDatVe\Combo.cs" />
+    <Compile Include="App_Code\database\QuanLyDatVe\DatCombo.cs" />
     <Compile Include="App_Code\database\DSVeDat.cs" />
+    <Compile Include="App_Code\database\QuanLyDatVe\DatGhe.cs" />
+    <Compile Include="App_Code\database\QuanLyDatVe\DSVeDat.cs" />
+    <Compile Include="App_Code\database\QuanLyDatVe\Gia.cs" />
+    <Compile Include="App_Code\database\QuanLyDatVe\GiaVeDat.cs" />
     <Compile Include="App_Code\database\QuanLyLichChieu\Ghe.cs" />
     <Compile Include="App_Code\database\QuanLyLichChieu\LoaiGhe.cs" />
     <Compile Include="App_Code\database\QuanLyLichChieu\QuanHuyen.cs" />
@@ -138,7 +143,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\database\QuanLyDatVe\" />
     <Folder Include="cms\" />
   </ItemGroup>
   <PropertyGroup>
