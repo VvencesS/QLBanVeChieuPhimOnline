@@ -81,6 +81,23 @@
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\database\BaoGia.cs" />
+    <Compile Include="App_Code\database\Combo.cs" />
+    <Compile Include="App_Code\database\DatCombo.cs" />
+    <Compile Include="App_Code\database\DSVeDat.cs" />
+    <Compile Include="App_Code\database\Ghe.cs" />
+    <Compile Include="App_Code\database\QuanLyPhim\DinhDang.cs" />
+    <Compile Include="App_Code\database\QuanLyPhim\HangPhim.cs" />
+    <Compile Include="App_Code\database\KhungThoiGian.cs" />
+    <Compile Include="App_Code\database\LichChieu.cs" />
+    <Compile Include="App_Code\database\LoaiQuangCao.cs" />
+    <Compile Include="App_Code\database\QuanLyPhim\TheLoai.cs" />
+    <Compile Include="App_Code\database\QuanLyTaiKhoan\NhanVien.cs" />
+    <Compile Include="App_Code\database\QuanLyPhim\Phim.cs" />
+    <Compile Include="App_Code\database\Phong.cs" />
+    <Compile Include="App_Code\database\QuangCao.cs" />
+    <Compile Include="App_Code\database\QuanLyTaiKhoan\ThanhVien.cs" />
+    <Compile Include="App_Code\database\QuanLyPhim\QuocGia.cs" />
     <Compile Include="App_Code\MaHoa.cs" />
     <Compile Include="App_Code\database\SQLDatabase.cs" />
     <Compile Include="Default.aspx.cs">
