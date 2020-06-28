@@ -1,11 +1,12 @@
-﻿using System;
+﻿using ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database
+namespace QuanLyLichChieu
 {
     public class Phong
     {
