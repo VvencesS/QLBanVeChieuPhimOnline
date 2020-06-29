@@ -356,23 +356,23 @@ table.tbDanhMuc {
 .tbDinhDang {
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #dfdfdf
+    border: 1px solid #dfdfdf;
 }
 
 table.tbDinhDang th,
 table.tbDinhDang td {
     padding: 5px;
-    border: 1px solid #dfdfdf
+    border: 1px solid #dfdfdf;
 }
 
 table.tbDinhDang .cotMa {
     width: 40px;
-    text-align: center
+    text-align: center;
 }
 
 table.tbDinhDang .cotCongCu {
     width: 120px;
-    text-align: right
+    text-align: right;
 }
 
 table.tbDinhDang .cotCongCu a {
@@ -380,31 +380,73 @@ table.tbDinhDang .cotCongCu a {
     width: 24px;
     height: 24px;
     background-position: center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
 }
 
 table.tbDinhDang .cotCongCu a.dmcon {
-    background-image: url(expend.jpg)
+    background-image: url(expend.jpg);
 }
 
 table.tbDinhDang .cotCongCu a.sua {
-    background-image: url(edit.jpg)
+    background-image: url(edit.jpg);
 }
 
 table.tbDinhDang .cotCongCu a.xoa {
-    background-image: url(delete.jpg)
+    background-image: url(delete.jpg);
+}
+/*CSS hiển thị hãng phim*/
+.tbHangPhim {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+
+table.tbHangPhim th,
+table.tbHangPhim td {
+    padding: 5px;
+    border: 1px solid #dfdfdf;
+}
+
+table.tbHangPhim .cotMa {
+    width: 40px;
+    text-align: center;
+}
+
+table.tbHangPhim .cotCongCu {
+    width: 120px;
+    text-align: right;
+}
+
+table.tbHangPhim .cotCongCu a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+table.tbHangPhim .cotCongCu a.dmcon {
+    background-image: url(expend.jpg);
+}
+
+table.tbHangPhim .cotCongCu a.sua {
+    background-image: url(edit.jpg);
+}
+
+table.tbHangPhim .cotCongCu a.xoa {
+    background-image: url(delete.jpg);
 }
 /* CSS trang hiển thị màu của sản phẩm*/
 table.tbMau {
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #dfdfdf
+    border: 1px solid #dfdfdf;
 }
 
     table.tbMau th,
     table.tbMau td {
         padding: 5px;
-        border: 1px solid #dfdfdf
+        border: 1px solid #dfdfdf;
     }
 
     table.tbMau .cotMa {
