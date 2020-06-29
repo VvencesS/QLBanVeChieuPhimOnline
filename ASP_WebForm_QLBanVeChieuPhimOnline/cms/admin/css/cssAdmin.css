@@ -478,6 +478,48 @@ table.tbQuocGia .cotCongCu a.sua {
 table.tbQuocGia .cotCongCu a.xoa {
     background-image: url(delete.jpg);
 }
+/*CSS hiển thị thể loại*/
+.tbTheLoai {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+
+table.tbTheLoai th,
+table.tbTheLoai td {
+    padding: 5px;
+    border: 1px solid #dfdfdf;
+}
+
+table.tbTheLoai .cotMa {
+    width: 40px;
+    text-align: center;
+}
+
+table.tbTheLoai .cotCongCu {
+    width: 120px;
+    text-align: right;
+}
+
+table.tbTheLoai .cotCongCu a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+table.tbTheLoai .cotCongCu a.dmcon {
+    background-image: url(expend.jpg);
+}
+
+table.tbTheLoai .cotCongCu a.sua {
+    background-image: url(edit.jpg);
+}
+
+table.tbTheLoai .cotCongCu a.xoa {
+    background-image: url(delete.jpg);
+}
 /* CSS trang hiển thị màu của sản phẩm*/
 table.tbMau {
     width: 100%;

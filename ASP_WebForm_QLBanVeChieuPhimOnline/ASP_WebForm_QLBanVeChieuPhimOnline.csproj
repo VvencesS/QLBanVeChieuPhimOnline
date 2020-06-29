@@ -126,6 +126,7 @@
     <Content Include="cms\admin\QuanLyPhim\QuocGia\QuocGiaLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyPhim\QuocGia\QuocGia_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyPhim\QuocGia\QuocGia_ThemMoi.ascx" />
+    <Content Include="cms\admin\QuanLyPhim\TheLoai\Ajax\TheLoai.aspx" />
     <Content Include="cms\admin\QuanLyPhim\TheLoai\TheLoaiLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyPhim\TheLoai\TheLoai_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyPhim\TheLoai\TheLoai_ThemMoi.ascx" />
@@ -530,6 +531,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyPhim\QuocGia\QuocGia_ThemMoi.ascx.designer.cs">
       <DependentUpon>QuocGia_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyPhim\TheLoai\Ajax\TheLoai.aspx.cs">
+      <DependentUpon>TheLoai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyPhim\TheLoai\Ajax\TheLoai.aspx.designer.cs">
+      <DependentUpon>TheLoai.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyPhim\TheLoai\TheLoaiLoadControl.ascx.cs">
       <DependentUpon>TheLoaiLoadControl.ascx</DependentUpon>
