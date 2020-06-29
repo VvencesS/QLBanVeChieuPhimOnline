@@ -110,6 +110,7 @@
     <Content Include="cms\admin\QuanLyLichChieu\SoGhe\SoGheLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\SoGhe\SoGhe_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\SoGhe\SoGhe_ThemMoi.ascx" />
+    <Content Include="cms\admin\QuanLyPhim\DinhDang\Ajax\DinhDang.aspx" />
     <Content Include="cms\admin\QuanLyPhim\DinhDang\DinhDangLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyPhim\DinhDang\DinhDang_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyPhim\DinhDang\DinhDang_ThemMoi.ascx" />
@@ -415,6 +416,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyLichChieu\SoGhe\SoGhe_ThemMoi.ascx.designer.cs">
       <DependentUpon>SoGhe_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyPhim\DinhDang\Ajax\DinhDang.aspx.cs">
+      <DependentUpon>DinhDang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyPhim\DinhDang\Ajax\DinhDang.aspx.designer.cs">
+      <DependentUpon>DinhDang.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyPhim\DinhDang\DinhDangLoadControl.ascx.cs">
       <DependentUpon>DinhDangLoadControl.ascx</DependentUpon>

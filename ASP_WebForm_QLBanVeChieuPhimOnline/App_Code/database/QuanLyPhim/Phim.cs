@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace QuanLyPhim
+namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyPhim
 {
     public class Phim
     {
