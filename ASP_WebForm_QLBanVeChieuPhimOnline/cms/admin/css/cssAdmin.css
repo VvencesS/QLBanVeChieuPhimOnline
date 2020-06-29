@@ -436,6 +436,48 @@ table.tbHangPhim .cotCongCu a.sua {
 table.tbHangPhim .cotCongCu a.xoa {
     background-image: url(delete.jpg);
 }
+/*CSS hiển thị quốc gia*/
+.tbQuocGia {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+
+table.tbQuocGia th,
+table.tbQuocGia td {
+    padding: 5px;
+    border: 1px solid #dfdfdf;
+}
+
+table.tbQuocGia .cotMa {
+    width: 40px;
+    text-align: center;
+}
+
+table.tbQuocGia .cotCongCu {
+    width: 120px;
+    text-align: right;
+}
+
+table.tbQuocGia .cotCongCu a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+table.tbQuocGia .cotCongCu a.dmcon {
+    background-image: url(expend.jpg);
+}
+
+table.tbQuocGia .cotCongCu a.sua {
+    background-image: url(edit.jpg);
+}
+
+table.tbQuocGia .cotCongCu a.xoa {
+    background-image: url(delete.jpg);
+}
 /* CSS trang hiển thị màu của sản phẩm*/
 table.tbMau {
     width: 100%;

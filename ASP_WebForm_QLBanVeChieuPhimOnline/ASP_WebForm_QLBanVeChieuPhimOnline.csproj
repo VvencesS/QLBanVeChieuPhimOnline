@@ -122,6 +122,7 @@
     <Content Include="cms\admin\QuanLyPhim\Phim\Phim_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyPhim\Phim\Phim_ThemMoi.ascx" />
     <Content Include="cms\admin\QuanLyPhim\QuanLyPhimLoadControl.ascx" />
+    <Content Include="cms\admin\QuanLyPhim\QuocGia\Ajax\QuocGia.aspx" />
     <Content Include="cms\admin\QuanLyPhim\QuocGia\QuocGiaLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyPhim\QuocGia\QuocGia_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyPhim\QuocGia\QuocGia_ThemMoi.ascx" />
@@ -501,6 +502,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyPhim\QuanLyPhimLoadControl.ascx.designer.cs">
       <DependentUpon>QuanLyPhimLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyPhim\QuocGia\Ajax\QuocGia.aspx.cs">
+      <DependentUpon>QuocGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyPhim\QuocGia\Ajax\QuocGia.aspx.designer.cs">
+      <DependentUpon>QuocGia.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyPhim\QuocGia\QuocGiaLoadControl.ascx.cs">
       <DependentUpon>QuocGiaLoadControl.ascx</DependentUpon>
