@@ -520,6 +520,81 @@ table.tbTheLoai .cotCongCu a.sua {
 table.tbTheLoai .cotCongCu a.xoa {
     background-image: url(delete.jpg);
 }
+/*CSS trang hiển thị phim*/
+table.tbPhim {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+
+table.tbPhim th,
+table.tbPhim td {
+    padding: 5px;
+    border: 1px solid #dfdfdf;
+}
+
+table.tbPhim .cotMa {
+    width: 40px;
+    text-align: center;
+}
+
+table.tbPhim .cotAnh {
+    width: 120px;
+    text-align: center;
+}
+
+table.tbPhim .cotNgayTao {
+    width: 150px;
+}
+
+table.tbPhim .cotCongCu {
+    width: 120px;
+    text-align: right;
+}
+
+table.tbPhim .cotCongCu a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+table.tbPhim .cotCongCu a.dmcon {
+    background-image: url(expend.jpg);
+}
+
+table.tbPhim .cotCongCu a.sua {
+    background-image: url(edit.jpg);
+}
+
+table.tbPhim .cotCongCu a.xoa {
+    background-image: url(delete.jpg);
+}
+
+table.tbPhim .cotAnh {
+    position: relative;
+    z-index: 1;
+}
+
+table.tbPhim .cotAnh .anhDaiDien {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+table.tbPhim .cotAnh .anhDaiDienHover {
+    max-width: 200px;
+    max-height: 200px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 80px;
+}
+
+table.tbPhim .cotAnh:hover .anhDaiDienHover {
+    display: inline-block;
+}
 /* CSS trang hiển thị màu của sản phẩm*/
 table.tbMau {
     width: 100%;

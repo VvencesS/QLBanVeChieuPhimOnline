@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace QuanLyTaiKhoan
+namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTaiKhoan
 {
     public class ThanhVien
     {

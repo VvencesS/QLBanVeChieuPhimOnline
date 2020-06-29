@@ -81,7 +81,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyPhim
         /// <param name="maHangPhim"></param>
         public static void Phim_Update(int maPhim, string tenPhim, string anhDaiDien, int maTheLoai, int maQuocGia, string thoiLuong, DateTime khoiChieu, DateTime ketThuc, string daoDien, string noiDung, string trailer, int maDinhDang, int maNhanVien, int maHangPhim)
         {
-            SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_Phim]" +
+            SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_Phim] " +
                "SET[TenPhim] = @tenPhim" +
                 "  ,[AnhDaiDien] = @anhDaiDien" +
                 "  ,[MaTheLoai] = @maTheLoai" +
@@ -94,7 +94,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyPhim
                 "  ,[Trailer] = @trailer" +
                 "  ,[MaDinhDang] = @maDinhDang" +
                 "  ,[MaNhanVien] = @maNhanVien" +
-                "  ,[MaHangPhim] = @maHangPhim" +
+                "  ,[MaHangPhim] = @maHangPhim " +
              "WHERE MaPhim=@maPhim");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@tenPhim", tenPhim);
@@ -121,13 +121,13 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyPhim
         /// <returns></returns>
         public static DataTable Thongtin_Phim()
         {
-            SqlCommand cmd = new SqlCommand("SELECT [MaPhim],[TenPhim],[AnhDaiDien],tb_TheLoai.TenTheLoai,tb_QuocGia.TenQuocGia,[ThoiLuong],[KhoiChieu],[KetThuc],[DaoDien],[NoiDung],[Trailer],tb_DinhDang.TenDinhDang,tb_NhanVien.MaNhanVien,tb_HangPhim.TenHangPhim" +
-              "FROM[dbo].[tb_Phim]" +
-              "INNER JOIN tb_TheLoai ON tb_TheLoai.MaTheLoai = tb_Phim.MaTheLoai" +
-              "INNER JOIN tb_QuocGia ON tb_QuocGia.MaQuocGia = tb_Phim.MaQuocGia" +
-              "INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phim.MaDinhDang" +
-              "INNER JOIN tb_NhanVien ON tb_NhanVien.MaNhanVien = tb_Phim.MaNhanVien" +
-              "INNER JOIN tb_HangPhim ON tb_HangPhim.MaHangPhim = tb_Phim.MaHangPhim");
+            SqlCommand cmd = new SqlCommand("SELECT [MaPhim],[TenPhim],[AnhDaiDien],tb_TheLoai.TenTheLoai,tb_QuocGia.TenQuocGia,[ThoiLuong],[KhoiChieu],[KetThuc],[DaoDien],[NoiDung],[Trailer],tb_DinhDang.TenDinhDang,tb_NhanVien.MaNhanVien,tb_HangPhim.TenHangPhim " +
+              "FROM[dbo].[tb_Phim] " +
+              "INNER JOIN tb_TheLoai ON tb_TheLoai.MaTheLoai = tb_Phim.MaTheLoai " +
+              "INNER JOIN tb_QuocGia ON tb_QuocGia.MaQuocGia = tb_Phim.MaQuocGia " +
+              "INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phim.MaDinhDang " +
+              "INNER JOIN tb_NhanVien ON tb_NhanVien.MaNhanVien = tb_Phim.MaNhanVien " +
+              "INNER JOIN tb_HangPhim ON tb_HangPhim.MaHangPhim = tb_Phim.MaHangPhim ");
             cmd.CommandType = CommandType.Text;
             return SQLDatabase.GetData(cmd);
         }
@@ -140,12 +140,12 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyPhim
         /// <returns></returns>
         public static DataTable Thongtin_PhimTheoMa(int maPhim)
         {
-            SqlCommand cmd = new SqlCommand("SELECT [MaPhim],[TenPhim],[AnhDaiDien],tb_TheLoai.TenTheLoai,tb_QuocGia.TenQuocGia,[ThoiLuong],[KhoiChieu],[KetThuc],[DaoDien],[NoiDung],[Trailer],tb_DinhDang.TenDinhDang,tb_NhanVien.MaNhanVien,tb_HangPhim.TenHangPhim" +
-              "FROM[dbo].[tb_Phim]" +
-              "INNER JOIN tb_TheLoai ON tb_TheLoai.MaTheLoai = tb_Phim.MaTheLoai" +
-              "INNER JOIN tb_QuocGia ON tb_QuocGia.MaQuocGia = tb_Phim.MaQuocGia" +
-              "INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phim.MaDinhDang" +
-              "INNER JOIN tb_NhanVien ON tb_NhanVien.MaNhanVien = tb_Phim.MaNhanVien" +
+            SqlCommand cmd = new SqlCommand("SELECT [MaPhim],[TenPhim],[AnhDaiDien],tb_TheLoai.TenTheLoai,tb_TheLoai.MaTheLoai,tb_QuocGia.TenQuocGia,tb_QuocGia.MaQuocGia,[ThoiLuong],[KhoiChieu],[KetThuc],[DaoDien],[NoiDung],[Trailer],tb_DinhDang.TenDinhDang,tb_DinhDang.MaDinhDang,tb_NhanVien.MaNhanVien,tb_HangPhim.TenHangPhim,tb_HangPhim.MaHangPhim " +
+              "FROM[dbo].[tb_Phim] " +
+              "INNER JOIN tb_TheLoai ON tb_TheLoai.MaTheLoai = tb_Phim.MaTheLoai " +
+              "INNER JOIN tb_QuocGia ON tb_QuocGia.MaQuocGia = tb_Phim.MaQuocGia " +
+              "INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phim.MaDinhDang " +
+              "INNER JOIN tb_NhanVien ON tb_NhanVien.MaNhanVien = tb_Phim.MaNhanVien " +
               "INNER JOIN tb_HangPhim ON tb_HangPhim.MaHangPhim = tb_Phim.MaHangPhim " +
               "WHERE MaPhim=@maPhim");
             cmd.CommandType = CommandType.Text;
