@@ -936,6 +936,7 @@
     <Content Include="cms\admin\QuanLyPhim\TheLoai\TheLoaiLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyPhim\TheLoai\TheLoai_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyPhim\TheLoai\TheLoai_ThemMoi.ascx" />
+    <Content Include="cms\admin\QuanLyTaiKhoan\NhanVien\Ajax\NhanVien.aspx" />
     <Content Include="cms\admin\QuanLyTaiKhoan\NhanVien\NhanVienLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyTaiKhoan\NhanVien\NhanVien_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyTaiKhoan\NhanVien\NhanVien_ThemMoi.ascx" />
@@ -1372,6 +1373,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyPhim\TheLoai\TheLoai_ThemMoi.ascx.designer.cs">
       <DependentUpon>TheLoai_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyTaiKhoan\NhanVien\Ajax\NhanVien.aspx.cs">
+      <DependentUpon>NhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyTaiKhoan\NhanVien\Ajax\NhanVien.aspx.designer.cs">
+      <DependentUpon>NhanVien.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyTaiKhoan\NhanVien\NhanVienLoadControl.ascx.cs">
       <DependentUpon>NhanVienLoadControl.ascx</DependentUpon>

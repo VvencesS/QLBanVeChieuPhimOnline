@@ -42,8 +42,8 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyPhim.Phim
                 if (dt.Rows.Count > 0)
                 {
                     tbTenPhim.Text = dt.Rows[0]["TenPhim"].ToString();
-                    tbKhoiChieu.Text = dt.Rows[0]["KhoiChieu"].ToString();
-                    tbKetThuc.Text = dt.Rows[0]["KetThuc"].ToString();
+                    tbKhoiChieu.Text = dt.Rows[0]["KhoiChieu"].ToString().Substring(0,10);
+                    tbKetThuc.Text = dt.Rows[0]["KetThuc"].ToString().Substring(0,10);
                     tbThoiLuong.Text = dt.Rows[0]["ThoiLuong"].ToString();
                     tbDaoDien.Text = dt.Rows[0]["DaoDien"].ToString();
                     ddlDinhDang.SelectedValue = dt.Rows[0]["MaDinhDang"].ToString();
@@ -197,8 +197,8 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyPhim.Phim
             tbTenPhim.Text = "";
             tbDaoDien.Text = "";
             tbNoiDung.Text = "";
-            tbKetThuc.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
-            tbKhoiChieu.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
+            tbKetThuc.Text = DateTime.Now.ToString("MM/dd/yyyy");
+            tbKhoiChieu.Text = DateTime.Now.ToString("MM/dd/yyyy");
             tbThoiLuong.Text = "";
             tbTrailer.Text = "";
         }

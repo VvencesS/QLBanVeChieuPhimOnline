@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Phim_ThemMoi.ascx.cs" Inherits="ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyPhim.Phim.Phim_ThemMoi" %>
 <div class="head">
-    Thêm mới, chỉnh sửa sản phẩm
+    Thêm mới, chỉnh sửa phim
 </div>
 <div class="FormThemMoi">
     <asp:Literal ID="ltrThongBao" runat="server"></asp:Literal>   
