@@ -15,6 +15,15 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyTaiKhoan.NhanVien
     {
 
         /// <summary>
+        /// MatKhauCu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField MatKhauCu;
+
+        /// <summary>
         /// ltrThongBao control.
         /// </summary>
         /// <remarks>

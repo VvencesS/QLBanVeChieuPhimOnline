@@ -3,6 +3,7 @@
     Thêm mới, chỉnh sửa nhân viên
 </div>
 <div class="FormThemMoi">
+    <asp:HiddenField ID="MatKhauCu" runat="server" />
     <asp:Literal ID="ltrThongBao" runat="server"></asp:Literal>   
     <div class="thongTin">
         <div class="tenTruong">Tên nhân viên</div>

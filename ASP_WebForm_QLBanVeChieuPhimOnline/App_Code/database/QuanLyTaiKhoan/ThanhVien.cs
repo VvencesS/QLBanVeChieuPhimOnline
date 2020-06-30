@@ -18,11 +18,11 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTaiKhoan
         public static DataTable ThongTinThanhVien()
         {
             SqlCommand cmd = new SqlCommand("SELECT tb_ThanhVien.[MaThanhVien],tb_ThanhVien.[HoTen],tb_ThanhVien.[Email],tb_ThanhVien.[PassWord],tb_ThanhVien.[Sdt]," +
-                "tb_ThanhVien.[SoThe],tb_ThanhVien.[NgaySinh],tb_ThanhVien.[GioiTinh],tb_ThanhVien.[TrangThai]," +
-                "tb_XaPhuong.TenXaPhuong, tb_QuanHuyen.TenQuanHuyen, tb_TinhThanhPho.TenTinhThanhPho from [tb_ThanhVien] " +
-                "inner join tb_XaPhuong on tb_ThanhVien.IDXaPhuong = tb_XaPhuong.IDXaPhuong " +
-                "inner join tb_QuanHuyen on tb_QuanHuyen.IDQuanHuyen = tb_XaPhuong.IDQuanHuyen " +
-                "inner join tb_TinhThanhPho on tb_TinhThanhPho.IDTinhThanhPho = tb_QuanHuyen.IDTinhThanhPho");
+                "tb_ThanhVien.[SoThe],tb_ThanhVien.[NgaySinh],tb_ThanhVien.[GioiTinh],tb_ThanhVien.[TrangThai],tb_ThanhVien.AnhDaiDien, " +
+                "tb_XaPhuong.TenXaPhuong, tb_QuanHuyen.TenQuanHuyen, tb_TinhThanhPho.TenTinhThanhPho,tb_XaPhuong.MaXaPhuong, tb_QuanHuyen.MaQuanHuyen, tb_TinhThanhPho.MaTinhThanhPho from [tb_ThanhVien] " +
+                "inner join tb_XaPhuong on tb_ThanhVien.MaXaPhuong = tb_XaPhuong.MaXaPhuong " +
+                "inner join tb_QuanHuyen on tb_QuanHuyen.MaQuanHuyen = tb_XaPhuong.MaQuanHuyen " +
+                "inner join tb_TinhThanhPho on tb_TinhThanhPho.MaTinhThanhPho = tb_QuanHuyen.MaTinhThanhPho");
             cmd.CommandType = CommandType.Text;
             return SQLDatabase.GetData(cmd);
         }
@@ -34,12 +34,12 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTaiKhoan
         /// <returns></returns>
         public static DataTable ThongTinThanhVienByMa(int maThanhVien)
         {
-            SqlCommand cmd = new SqlCommand("SELECT tb_ThanhVien.[MaThanhVien],tb_ThanhVien.[HoTen],tb_ThanhVien.[Email],tb_ThanhVien.[PassWord],tb_ThanhVien.[Sdt]," +
+            SqlCommand cmd = new SqlCommand("SELECT tb_ThanhVien.[MaThanhVien],tb_ThanhVien.AnhDaiDien,tb_ThanhVien.[HoTen],tb_ThanhVien.[Email],tb_ThanhVien.[PassWord],tb_ThanhVien.[Sdt]," +
                 "tb_ThanhVien.[SoThe],tb_ThanhVien.[NgaySinh],tb_ThanhVien.[GioiTinh],tb_ThanhVien.[TrangThai]," +
-                "tb_XaPhuong.TenXaPhuong, tb_QuanHuyen.TenQuanHuyen, tb_TinhThanhPho.TenTinhThanhPho from [tb_ThanhVien] " +
-                "inner join tb_XaPhuong on tb_ThanhVien.IDXaPhuong = tb_XaPhuong.IDXaPhuong " +
-                "inner join tb_QuanHuyen on tb_QuanHuyen.IDQuanHuyen = tb_XaPhuong.IDQuanHuyen " +
-                "inner join tb_TinhThanhPho on tb_TinhThanhPho.IDTinhThanhPho = tb_QuanHuyen.IDTinhThanhPho where MaThanhVien=@maThanhVien");
+                "tb_XaPhuong.TenXaPhuong, tb_QuanHuyen.TenQuanHuyen, tb_TinhThanhPho.TenTinhThanhPho,tb_XaPhuong.MaXaPhuong, tb_QuanHuyen.MaQuanHuyen, tb_TinhThanhPho.MaTinhThanhPho from [tb_ThanhVien] " +
+                "inner join tb_XaPhuong on tb_ThanhVien.MaXaPhuong = tb_XaPhuong.MaXaPhuong " +
+                "inner join tb_QuanHuyen on tb_QuanHuyen.MaQuanHuyen = tb_XaPhuong.MaQuanHuyen " +
+                "inner join tb_TinhThanhPho on tb_TinhThanhPho.MaTinhThanhPho = tb_QuanHuyen.MaTinhThanhPho where MaThanhVien=@maThanhVien");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@maThanhVien", maThanhVien);
             return SQLDatabase.GetData(cmd);
@@ -73,8 +73,9 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTaiKhoan
 
         #region Phương thức thêm mới Nhanvien vào bảng Nhanvien
         /// <summary>
-        /// Phương thức thêm mới thành viên
+        /// Phương thức thêm mới Nhanvien vào bảng Nhanvien
         /// </summary>
+        /// <param name="anhDaiDien"></param>
         /// <param name="hoTen"></param>
         /// <param name="email"></param>
         /// <param name="sdt"></param>
@@ -82,12 +83,12 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTaiKhoan
         /// <param name="gioiTinh"></param>
         /// <param name="ngaySinh"></param>
         /// <param name="passWord"></param>
-        /// <param name="idXaPhuong"></param>
+        /// <param name="MaXaPhuong"></param>
         /// <param name="trangThai"></param>
-        public static void ThanhVien_Inser(string hoTen, string email, string sdt, string soThe, bool gioiTinh, DateTime ngaySinh, string passWord, int idXaPhuong, bool trangThai)
+        public static void ThanhVien_Inser(string anhDaiDien, string hoTen, string email, string sdt, string soThe, bool gioiTinh, DateTime ngaySinh, string passWord, int MaXaPhuong, bool trangThai)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_ThanhVien] ([HoTen] ,[Email] ,[PassWord] ,[Sdt] ,[SoThe] ,[NgaySinh] ,[GioiTinh] ,[TrangThai] ,[IDXaPhuong]) " +
-                "VALUES(@hoTen,@email,@passWord,@sdt,@soThe,@ngaySinh,@gioiTinh,@trangThai,@idXaPhuong)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_ThanhVien] (AnhDaiDien, [HoTen] ,[Email] ,[PassWord] ,[Sdt] ,[SoThe] ,[NgaySinh] ,[GioiTinh] ,[TrangThai] ,[MaXaPhuong]) " +
+                "VALUES(@anhDaiDien,@hoTen,@email,@passWord,@sdt,@soThe,@ngaySinh,@gioiTinh,@trangThai,@MaXaPhuong)");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@trangThai", trangThai);
             cmd.Parameters.AddWithValue("@hoTen", hoTen);
@@ -97,7 +98,8 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTaiKhoan
             cmd.Parameters.AddWithValue("@ngaySinh", ngaySinh);
             cmd.Parameters.AddWithValue("@gioiTinh", gioiTinh);
             cmd.Parameters.AddWithValue("@passWord", passWord);
-            cmd.Parameters.AddWithValue("@idXaPhuong", idXaPhuong);
+            cmd.Parameters.AddWithValue("@MaXaPhuong", MaXaPhuong);
+            cmd.Parameters.AddWithValue("@anhDaiDien", anhDaiDien);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
         #endregion
@@ -114,14 +116,14 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTaiKhoan
         /// <param name="ngaySinh"></param>
         /// <param name="userName"></param>
         /// <param name="passWord"></param>
-        /// <param name="idXaPhuong"></param>
+        /// <param name="MaXaPhuong"></param>
         /// <param name=""></param>
         /// <param name="trangThai"></param>
         /// <param name="maThanhVien"></param>
-        public static void ThanhVien_Update(string hoTen, string email, string sdt, string soThe, bool gioiTinh, DateTime ngaySinh, string passWord, int idXaPhuong, bool trangThai, int maThanhVien)
+        public static void ThanhVien_Update(string anhDaiDien, string hoTen, string email, string sdt, string soThe, bool gioiTinh, DateTime ngaySinh, string passWord, int MaXaPhuong, bool trangThai, int maThanhVien)
         {
-            SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_ThanhVien] SET[UserName] = @userName,[HoTen] = @hoTen,[Email] = @email,[Sdt] = @sdt,[SoThe] = @soThe," +
-                "[NgaySinh] = @ngaySinh,[GioiTinh] = @gioiTinh,[PassWord] = @passWord,[IDXaPhuong] = @idXaPhuong WHERE MaThanhVien=@maThanhVien");
+            SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_ThanhVien] SET [AnhDaiDien] = @anhDaiDien,[HoTen] = @hoTen,[Email] = @email,[Sdt] = @sdt,[SoThe] = @soThe," +
+                "[NgaySinh] = @ngaySinh,[GioiTinh] = @gioiTinh,[PassWord] = @passWord,[MaXaPhuong] = @MaXaPhuong WHERE MaThanhVien=@maThanhVien");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@trangThai", trangThai);
             cmd.Parameters.AddWithValue("@hoTen", hoTen);
@@ -131,7 +133,8 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTaiKhoan
             cmd.Parameters.AddWithValue("@ngaySinh", ngaySinh);
             cmd.Parameters.AddWithValue("@gioiTinh", gioiTinh);
             cmd.Parameters.AddWithValue("@passWord", passWord);
-            cmd.Parameters.AddWithValue("@idXaPhuong", idXaPhuong);
+            cmd.Parameters.AddWithValue("@MaXaPhuong", MaXaPhuong);
+            cmd.Parameters.AddWithValue("@anhDaiDien", anhDaiDien);
             cmd.Parameters.AddWithValue("@maThanhVien", maThanhVien);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }

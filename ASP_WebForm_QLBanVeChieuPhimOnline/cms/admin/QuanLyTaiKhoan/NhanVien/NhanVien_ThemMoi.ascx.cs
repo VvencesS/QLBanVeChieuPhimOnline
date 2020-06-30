@@ -53,7 +53,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyTaiKhoan.NhanVien
                     ddlQuanHuyen.SelectedValue = dt.Rows[0]["MaQuanHuyen"].ToString();
                     ddlXaPhuong.SelectedValue = dt.Rows[0]["MaXaPhuong"].ToString();
                     ddlRap.SelectedValue = dt.Rows[0]["MaRap"].ToString();
-                    mkCu= dt.Rows[0]["PassWord"].ToString();
+                    MatKhauCu.Value= dt.Rows[0]["PassWord"].ToString();
                 }
             }
 
@@ -148,7 +148,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyTaiKhoan.NhanVien
                 else
                 {
                     ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTaiKhoan.NhanVien.Nhanvien_Update(tbUsername.Text.Trim(), tbTenNhanVien.Text.Trim(), tbEmail.Text.Trim(), tbSDT.Text.Trim(), tbCMT.Text.Trim()
-                    , gt, DateTime.Parse(tbNgaySinh.Text.Trim()), mkCu, int.Parse(ddlXaPhuong.SelectedValue), int.Parse(ddlRap.SelectedValue), int.Parse(id));
+                    , gt, DateTime.Parse(tbNgaySinh.Text.Trim()), MatKhauCu.Value, int.Parse(ddlXaPhuong.SelectedValue), int.Parse(ddlRap.SelectedValue), int.Parse(id));
                 }
 
                 //đẩy trang về trang danh sách các damnh mục đã tạo

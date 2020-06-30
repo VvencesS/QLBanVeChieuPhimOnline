@@ -941,6 +941,7 @@
     <Content Include="cms\admin\QuanLyTaiKhoan\NhanVien\NhanVien_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyTaiKhoan\NhanVien\NhanVien_ThemMoi.ascx" />
     <Content Include="cms\admin\QuanLyTaiKhoan\QuanLyTaiKhoanLoadControl.ascx" />
+    <Content Include="cms\admin\QuanLyTaiKhoan\ThanhVien\Ajax\ThanhVien.aspx" />
     <Content Include="cms\admin\QuanLyTaiKhoan\ThanhVien\ThanhVien_ThemMoi.ascx" />
     <Content Include="cms\admin\QuanLyTaiKhoan\ThanhVien\ThanhVienLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyTaiKhoan\ThanhVien\ThanhVien_HienThi.ascx" />
@@ -1409,6 +1410,13 @@
     <Compile Include="cms\admin\QuanLyTaiKhoan\QuanLyTaiKhoanLoadControl.ascx.designer.cs">
       <DependentUpon>QuanLyTaiKhoanLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\QuanLyTaiKhoan\ThanhVien\Ajax\ThanhVien.aspx.cs">
+      <DependentUpon>ThanhVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyTaiKhoan\ThanhVien\Ajax\ThanhVien.aspx.designer.cs">
+      <DependentUpon>ThanhVien.aspx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\QuanLyTaiKhoan\ThanhVien\ThanhVien_ThemMoi.ascx.cs">
       <DependentUpon>ThanhVien_ThemMoi.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1557,6 +1565,7 @@
   <ItemGroup>
     <Folder Include="cms\display\" />
     <Folder Include="pic\Phim\" />
+    <Folder Include="pic\ThanhVien\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
