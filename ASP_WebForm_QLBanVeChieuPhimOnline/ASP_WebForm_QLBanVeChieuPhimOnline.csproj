@@ -945,6 +945,7 @@
     <Content Include="cms\admin\QuanLyTaiKhoan\ThanhVien\ThanhVien_ThemMoi.ascx" />
     <Content Include="cms\admin\QuanLyTaiKhoan\ThanhVien\ThanhVienLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyTaiKhoan\ThanhVien\ThanhVien_HienThi.ascx" />
+    <Content Include="cms\admin\QuanLyTTVaQC\LoaiQuangCao\Ajax\LoaiQuangCao.aspx" />
     <Content Include="cms\admin\QuanLyTTVaQC\LoaiQuangCao\LoaiQuangCaoLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyTTVaQC\LoaiQuangCao\LoaiQuangCao_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyTTVaQC\LoaiQuangCao\LoaiQuangCao_ThemMoi.ascx" />
@@ -1437,6 +1438,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyTaiKhoan\ThanhVien\ThanhVien_HienThi.ascx.designer.cs">
       <DependentUpon>ThanhVien_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyTTVaQC\LoaiQuangCao\Ajax\LoaiQuangCao.aspx.cs">
+      <DependentUpon>LoaiQuangCao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyTTVaQC\LoaiQuangCao\Ajax\LoaiQuangCao.aspx.designer.cs">
+      <DependentUpon>LoaiQuangCao.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyTTVaQC\LoaiQuangCao\LoaiQuangCaoLoadControl.ascx.cs">
       <DependentUpon>LoaiQuangCaoLoadControl.ascx</DependentUpon>

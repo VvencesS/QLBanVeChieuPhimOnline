@@ -16,11 +16,11 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyTTVaQC
                 submodul = Request.QueryString["submodul"];
             switch (submodul)
             {
-                case "LoaiTinTuc":
+                case "LoaiTT":
                     plSanPhamLoadControl.Controls.Add(LoadControl("LoaiTinTuc/LoaiTinTucLoadControl.ascx"));
                     break;
 
-                case "LoaiQuangCao":
+                case "LoaiQC":
                     plSanPhamLoadControl.Controls.Add(LoadControl("LoaiQuangCao/LoaiQuangCaoLoadControl.ascx"));
                     break;
 
