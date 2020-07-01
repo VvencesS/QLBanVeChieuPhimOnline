@@ -88,9 +88,9 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
               "    ,[SoHangMax]" +
               "    ,[SoCotMax]" +
               "    , tb_DinhDang.TenDinhDang" +
-              "    , tb_Rap.TenRap" +
-              "FROM[dbo].[tb_Phong]" +
-              "INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phong.MaDinhDang" +
+              "    , tb_Rap.TenRap " +
+              "FROM[dbo].[tb_Phong] " +
+              "INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phong.MaDinhDang " +
               "INNER JOIN tb_Rap ON tb_Rap.MaRap = tb_Phong.MaRap"); 
             cmd.CommandType = CommandType.Text;
             return SQLDatabase.GetData(cmd);
@@ -105,14 +105,9 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <returns></returns>
         public static DataTable Thongtin_Phong_by_Ma(int maPhong)
         {
-            SqlCommand cmd = new SqlCommand("SELECT [MaPhong]" +
-              "    ,[TenPhong]" +
-              "    ,[SoHangMax]" +
-              "    ,[SoCotMax]" +
-              "    , tb_DinhDang.TenDinhDang" +
-              "    , tb_Rap.TenRap" +
-              "FROM[dbo].[tb_Phong]" +
-              "INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phong.MaDinhDang" +
+            SqlCommand cmd = new SqlCommand("SELECT [MaPhong],[TenPhong],[SoHangMax],[SoCotMax],tb_DinhDang.TenDinhDang,tb_DinhDang.MaDinhDang,tb_Rap.TenRap,tb_Rap.MaRap " +
+              "FROM[dbo].[tb_Phong] " +
+              "INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phong.MaDinhDang " +
               "INNER JOIN tb_Rap ON tb_Rap.MaRap = tb_Phong.MaRap WHERE MaPhong=@maPhong");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@maPhong", maPhong);

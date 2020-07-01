@@ -927,6 +927,7 @@
     <Content Include="cms\admin\QuanLyLichChieu\LichChieu\LichChieuLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\LichChieu\LichChieu_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\LichChieu\LichChieu_ThemMoi.ascx" />
+    <Content Include="cms\admin\QuanLyLichChieu\Phong\Ajax\Phong.aspx" />
     <Content Include="cms\admin\QuanLyLichChieu\Phong\PhongLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\Phong\Phong_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\Phong\Phong_ThemMoi.ascx" />
@@ -1185,6 +1186,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyLichChieu\LichChieu\LichChieu_ThemMoi.ascx.designer.cs">
       <DependentUpon>LichChieu_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyLichChieu\Phong\Ajax\Phong.aspx.cs">
+      <DependentUpon>Phong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyLichChieu\Phong\Ajax\Phong.aspx.designer.cs">
+      <DependentUpon>Phong.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyLichChieu\Phong\PhongLoadControl.ascx.cs">
       <DependentUpon>PhongLoadControl.ascx</DependentUpon>
