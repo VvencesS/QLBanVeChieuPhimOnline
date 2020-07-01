@@ -77,7 +77,8 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <returns></returns>
         public static DataTable Thongtin_Ghe()
         {
-            SqlCommand cmd = new SqlCommand("SELECT [MaGhe],[SoGhe],tb_Phong.TenPhong,tb_LoaiGhe.TenLoaiGhe,tb_TrangThai.MoTa " +
+            SqlCommand cmd = new SqlCommand("SELECT [MaGhe],[SoGhe],tb_Phong.TenPhong,tb_LoaiGhe.TenLoaiGhe,tb_TrangThai.MoTa, " +
+                "tb_Phong.MaPhong,tb_LoaiGhe.MaLoaiGhe,tb_TrangThai.MaTrangThai " +
               "FROM[dbo].[tb_Ghe] " +
               "INNER JOIN tb_Phong ON tb_Phong.MaPhong = tb_Ghe.MaPhong " +
               "INNER JOIN tb_LoaiGhe ON tb_LoaiGhe.MaLoaiGhe = tb_Ghe.MaPhong " +
@@ -95,7 +96,8 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <returns></returns>
         public static DataTable Thongtin_Ghe_by_Ma(int maGhe)
         {
-            SqlCommand cmd = new SqlCommand("SELECT [MaGhe],[SoGhe],tb_Phong.TenPhong,tb_LoaiGhe.TenLoaiGhe,tb_TrangThai.MoTa " +
+            SqlCommand cmd = new SqlCommand("SELECT [MaGhe],[SoGhe],tb_Phong.TenPhong,tb_LoaiGhe.TenLoaiGhe,tb_TrangThai.MoTa, " +
+                "tb_Phong.MaPhong,tb_LoaiGhe.MaLoaiGhe,tb_TrangThai.MaTrangThai " +
               "FROM[dbo].[tb_Ghe] " +
               "INNER JOIN tb_Phong ON tb_Phong.MaPhong = tb_Ghe.MaPhong " +
               "INNER JOIN tb_LoaiGhe ON tb_LoaiGhe.MaLoaiGhe = tb_Ghe.MaPhong " +

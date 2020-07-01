@@ -918,6 +918,7 @@
     <Content Include="cms\admin\QuanLyDatVe\Ve\VeLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyDatVe\Ve\Ve_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyDatVe\Ve\Ve_ThemMoi.ascx" />
+    <Content Include="cms\admin\QuanLyLichChieu\Ghe\Ajax\Ghe.aspx" />
     <Content Include="cms\admin\QuanLyLichChieu\Ghe\GheLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\Ghe\Ghe_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\Ghe\Ghe_ThemMoi.ascx" />
@@ -1123,6 +1124,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyDatVe\Ve\Ve_ThemMoi.ascx.designer.cs">
       <DependentUpon>Ve_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyLichChieu\Ghe\Ajax\Ghe.aspx.cs">
+      <DependentUpon>Ghe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyLichChieu\Ghe\Ajax\Ghe.aspx.designer.cs">
+      <DependentUpon>Ghe.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyLichChieu\Ghe\GheLoadControl.ascx.cs">
       <DependentUpon>GheLoadControl.ascx</DependentUpon>
