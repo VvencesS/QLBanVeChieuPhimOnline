@@ -31,13 +31,14 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTTVaQC
         /// <param name="tieuDe"></param>
         /// <param name="noiDung"></param>
         /// <param name="maLoaiTinTuc"></param>
-        public static void TinTuc_Insert(string tieuDe, string noiDung, int maLoaiTinTuc)
+        public static void TinTuc_Insert(string tieuDe, string noiDung, int maLoaiTinTuc,DateTime ngayThem)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_TinTuc] ([TieuDe],[NoiDung],[MaLoaiTinTuc]) VALUES(@tieuDe,@noiDung,@maLoaiTinTuc)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_TinTuc] ([TieuDe],[NoiDung],[MaLoaiTinTuc],NgayThem) VALUES(@tieuDe,@noiDung,@maLoaiTinTuc,@ngayThem)");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@maLoaiTinTuc", maLoaiTinTuc);
             cmd.Parameters.AddWithValue("@tieuDe", tieuDe);
             cmd.Parameters.AddWithValue("@noiDung", noiDung);
+            cmd.Parameters.AddWithValue("@ngayThem", ngayThem);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
         #endregion

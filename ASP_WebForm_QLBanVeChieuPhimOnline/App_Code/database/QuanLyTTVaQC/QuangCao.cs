@@ -30,12 +30,14 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTTVaQC
         /// </summary>
         /// <param name="maLoaiQuangCao"></param>
         /// <param name="anhQC"></param>
-        public static void QuangCao_Insert(int maLoaiQuangCao, string anhQC)
+        /// <param name="ngayThem"></param>
+        public static void QuangCao_Insert(int maLoaiQuangCao, string anhQC, DateTime ngayThem)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_QuangCao] ([MaLoaiQuangCao],[AnhQC]) VALUES(@maLoaiQuangCao,@anhQC)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_QuangCao] ([MaLoaiQuangCao],[AnhQC],NgayThem) VALUES(@maLoaiQuangCao,@anhQC,@ngayThem)");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@maLoaiQuangCao", maLoaiQuangCao);
             cmd.Parameters.AddWithValue("@anhQC", anhQC);
+            cmd.Parameters.AddWithValue("@ngayThem", ngayThem);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
         #endregion
@@ -65,12 +67,30 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTTVaQC
         /// <returns></returns>
         public static DataTable Thongtin_QuangCao()
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[tb_QuangCao]");
+            SqlCommand cmd = new SqlCommand("SELECT [MaQuangCao],tb_LoaiQuangCao.MaLoaiQuangCao,tb_LoaiQuangCao.TenLoaiQuangCao,[AnhQC],[NgayThem] " +
+                "FROM[dbo].[tb_QuangCao] " +
+                "INNER JOIN tb_LoaiQuangCao ON tb_LoaiQuangCao.MaLoaiQuangCao = tb_QuangCao.MaLoaiQuangCao");
             cmd.CommandType = CommandType.Text;
             return SQLDatabase.GetData(cmd);
         }
         #endregion
 
+        #region Phương thức lấy ra danh sách tất cả quảng cáo theo mã
+        /// <summary>
+        /// Phương thức lấy ra danh sách tất cả quảng cáo theo mã
+        /// </summary>
+        /// <param name="maQuangCao"></param>
+        /// <returns></returns>
+        public static DataTable Thongtin_QuangCao_ByMa(int maQuangCao)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT [MaQuangCao],tb_LoaiQuangCao.MaLoaiQuangCao,tb_LoaiQuangCao.TenLoaiQuangCao,[AnhQC],[NgayThem] " +
+                "FROM[dbo].[tb_QuangCao] " +
+                "INNER JOIN tb_LoaiQuangCao ON tb_LoaiQuangCao.MaLoaiQuangCao = tb_QuangCao.MaLoaiQuangCao WHERE MaQuangCao=@maQuangCao");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@maQuangCao", maQuangCao);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
         #region Phương thức lấy ra danh sách thông tin quảng cáo theo mã loại quảng cáo
         /// <summary>
         /// Phương thức lấy ra danh sách thông tin quảng cáo theo mã
@@ -85,17 +105,16 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTTVaQC
             return SQLDatabase.GetData(cmd);
         }
         #endregion
-        #region Phương thức lấy ra danh sách thông tin quảng cáo theo mã quảng cáo
+        #region Phương thức lấy ra danh sách thông tin quảng cáo sắp xếp theo ngày
         /// <summary>
-        /// Phương thức lấy ra danh sách thông tin quảng cáo theo mã
+        /// Phương thức lấy ra danh sách thông tin quảng cáo sắp xếp theo ngày
         /// </summary>
-        /// <param name="maQuangCao"></param>
         /// <returns></returns>
-        public static DataTable Thongtin_QuangCao_by_MaQuangCao(int maQuangCao)
+        public static DataTable Thongtin_QuangCao_OrderBy(int maLoaiQuangCao)
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[tb_QuangCao] WHERE MaQuangCao=@maQuangCao");
+            SqlCommand cmd = new SqlCommand("SELECT TOP(3) * FROM [dbo].[tb_QuangCao] WHERE MaLoaiQuangCao=@maLoaiQuangCao ORDER BY NgayThem DESC");
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@maQuangCao", maQuangCao);
+            cmd.Parameters.AddWithValue("@maLoaiQuangCao", maLoaiQuangCao);
             return SQLDatabase.GetData(cmd);
         }
         #endregion

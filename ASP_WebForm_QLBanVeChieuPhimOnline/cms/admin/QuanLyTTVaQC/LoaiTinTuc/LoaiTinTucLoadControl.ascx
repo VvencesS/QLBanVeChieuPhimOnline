@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LoaiTinTucLoadControl.ascx.cs" Inherits="ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyTTVaQC.LoaiTinTuc.LoaiTinTucLoadCotrol" %>
+<asp:PlaceHolder ID="plLoadControl" runat="server"></asp:PlaceHolder>

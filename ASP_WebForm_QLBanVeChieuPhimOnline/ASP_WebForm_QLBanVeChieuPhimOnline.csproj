@@ -949,9 +949,11 @@
     <Content Include="cms\admin\QuanLyTTVaQC\LoaiQuangCao\LoaiQuangCaoLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyTTVaQC\LoaiQuangCao\LoaiQuangCao_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyTTVaQC\LoaiQuangCao\LoaiQuangCao_ThemMoi.ascx" />
-    <Content Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\LoaiTinTucLoadCotrol.ascx" />
+    <Content Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\Ajax\LoaiTinTuc.aspx" />
+    <Content Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\LoaiTinTucLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\LoaiTinTuc_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\LoaiTinTuc_ThemMoi.ascx" />
+    <Content Include="cms\admin\QuanLyTTVaQC\QuangCao\Ajax\QuangCao.aspx" />
     <Content Include="cms\admin\QuanLyTTVaQC\QuangCao\QuangCaoLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyTTVaQC\QuangCao\QuangCao_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyTTVaQC\QuangCao\QuangCao_ThemMoi.ascx" />
@@ -1467,12 +1469,19 @@
     <Compile Include="cms\admin\QuanLyTTVaQC\LoaiQuangCao\LoaiQuangCao_ThemMoi.ascx.designer.cs">
       <DependentUpon>LoaiQuangCao_ThemMoi.ascx</DependentUpon>
     </Compile>
-    <Compile Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\LoaiTinTucLoadCotrol.ascx.cs">
-      <DependentUpon>LoaiTinTucLoadCotrol.ascx</DependentUpon>
+    <Compile Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\Ajax\LoaiTinTuc.aspx.cs">
+      <DependentUpon>LoaiTinTuc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\LoaiTinTucLoadCotrol.ascx.designer.cs">
-      <DependentUpon>LoaiTinTucLoadCotrol.ascx</DependentUpon>
+    <Compile Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\Ajax\LoaiTinTuc.aspx.designer.cs">
+      <DependentUpon>LoaiTinTuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\LoaiTinTucLoadControl.ascx.cs">
+      <DependentUpon>LoaiTinTucLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\LoaiTinTucLoadControl.ascx.designer.cs">
+      <DependentUpon>LoaiTinTucLoadControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\LoaiTinTuc_HienThi.ascx.cs">
       <DependentUpon>LoaiTinTuc_HienThi.ascx</DependentUpon>
@@ -1487,6 +1496,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyTTVaQC\LoaiTinTuc\LoaiTinTuc_ThemMoi.ascx.designer.cs">
       <DependentUpon>LoaiTinTuc_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyTTVaQC\QuangCao\Ajax\QuangCao.aspx.cs">
+      <DependentUpon>QuangCao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyTTVaQC\QuangCao\Ajax\QuangCao.aspx.designer.cs">
+      <DependentUpon>QuangCao.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyTTVaQC\QuangCao\QuangCaoLoadControl.ascx.cs">
       <DependentUpon>QuangCaoLoadControl.ascx</DependentUpon>
@@ -1573,6 +1589,7 @@
   <ItemGroup>
     <Folder Include="cms\display\" />
     <Folder Include="pic\Phim\" />
+    <Folder Include="pic\QuangCao\" />
     <Folder Include="pic\ThanhVien\" />
   </ItemGroup>
   <PropertyGroup>

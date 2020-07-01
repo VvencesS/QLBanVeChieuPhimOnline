@@ -243,8 +243,8 @@ table.tbDanhMuc {
     }
 
     table.tbDanhMuc .cotAnh {
-        width: 120px;
-        text-align: center
+        width: 200px;
+        text-align: center;
     }
 
     table.tbDanhMuc .cotDonGia {
@@ -327,18 +327,18 @@ table.tbDanhMuc {
     }
 
         table.tbDanhMuc .cotAnh .anhDaiDien {
-            max-width: 40px;
-            max-height: 40px
+            max-width: 150px;
+            max-height: 100px;
         }
 
         table.tbDanhMuc .cotAnh .anhDaiDienHover {
-            max-width: 200px;
+            max-width: 400px;
             max-height: 200px;
             display: none;
             position: absolute;
             z-index: 1;
-            top: 0;
-            right: 80px
+            top: 20%;
+            right: 90%;
         }
 
         table.tbDanhMuc .cotAnh:hover .anhDaiDienHover {
@@ -649,72 +649,74 @@ table.tbThanhVien {
     border: 1px solid #dfdfdf;
 }
 
-table.tbThanhVien th,
-table.tbThanhVien td {
-    padding: 5px;
-    border: 1px solid #dfdfdf;
-}
-
-table.tbThanhVien .cotMa {
-    width: 40px;
-    text-align: center;
-}
-
-table.tbThanhVien .cotNgayTao {
-    width: 70px;
-}
-
-table.tbThanhVien .cotCongCu {
-    width: 120px;
-    text-align: right;
-}
-
-    table.tbThanhVien .cotCongCu a {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        background-position: center;
-        background-repeat: no-repeat;
+    table.tbThanhVien th,
+    table.tbThanhVien td {
+        padding: 5px;
+        border: 1px solid #dfdfdf;
     }
 
-        table.tbThanhVien .cotCongCu a.dmcon {
-            background-image: url(expend.jpg);
-        }
-
-        table.tbThanhVien .cotCongCu a.sua {
-            background-image: url(edit.jpg);
-        }
-
-        table.tbThanhVien .cotCongCu a.xoa {
-            background-image: url(delete.jpg);
-        }
-table.tbThanhVien .cotAnh {
-    width: 120px;
-    text-align: center;
-}
-table.tbThanhVien .cotAnh {
-    position: relative;
-    z-index: 1;
-}
-
-    table.tbThanhVien .cotAnh .anhDaiDien {
-        max-width: 40px;
-        max-height: 40px;
+    table.tbThanhVien .cotMa {
+        width: 40px;
+        text-align: center;
     }
 
-    table.tbThanhVien .cotAnh .anhDaiDienHover {
-        max-width: 200px;
-        max-height: 200px;
-        display: none;
-        position: absolute;
+    table.tbThanhVien .cotNgayTao {
+        width: 70px;
+    }
+
+    table.tbThanhVien .cotCongCu {
+        width: 120px;
+        text-align: right;
+    }
+
+        table.tbThanhVien .cotCongCu a {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+            table.tbThanhVien .cotCongCu a.dmcon {
+                background-image: url(expend.jpg);
+            }
+
+            table.tbThanhVien .cotCongCu a.sua {
+                background-image: url(edit.jpg);
+            }
+
+            table.tbThanhVien .cotCongCu a.xoa {
+                background-image: url(delete.jpg);
+            }
+
+    table.tbThanhVien .cotAnh {
+        width: 120px;
+        text-align: center;
+    }
+
+    table.tbThanhVien .cotAnh {
+        position: relative;
         z-index: 1;
-        top: 0;
-        right: 80px;
     }
 
-    table.tbThanhVien .cotAnh:hover .anhDaiDienHover {
-        display: inline-block;
-    }
+        table.tbThanhVien .cotAnh .anhDaiDien {
+            max-width: 40px;
+            max-height: 40px;
+        }
+
+        table.tbThanhVien .cotAnh .anhDaiDienHover {
+            max-width: 200px;
+            max-height: 200px;
+            display: none;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 80px;
+        }
+
+        table.tbThanhVien .cotAnh:hover .anhDaiDienHover {
+            display: inline-block;
+        }
 /* CSS trang hiển thị màu của sản phẩm*/
 table.tbMau {
     width: 100%;
