@@ -912,6 +912,7 @@
     <Content Include="cms\admin\QuanLyDatVe\Combo\ComboLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyDatVe\Combo\Combo_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyDatVe\Combo\Combo_ThemMoi.ascx" />
+    <Content Include="cms\admin\QuanLyDatVe\Gia\Ajax\Gia.aspx" />
     <Content Include="cms\admin\QuanLyDatVe\Gia\GiaLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyDatVe\Gia\Gia_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyDatVe\Gia\Gia_ThemMoi.ascx" />
@@ -1085,6 +1086,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyDatVe\Combo\Combo_ThemMoi.ascx.designer.cs">
       <DependentUpon>Combo_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyDatVe\Gia\Ajax\Gia.aspx.cs">
+      <DependentUpon>Gia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyDatVe\Gia\Ajax\Gia.aspx.designer.cs">
+      <DependentUpon>Gia.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyDatVe\Gia\GiaLoadControl.ascx.cs">
       <DependentUpon>GiaLoadControl.ascx</DependentUpon>
