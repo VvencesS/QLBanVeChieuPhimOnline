@@ -18,7 +18,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyDatVe.Combo
             {
                 case "ThemMoi":
                 case "ChinhSua":
-                    plLoadControl.Controls.Add(LoadControl("Combo_HienThi.ascx"));
+                    plLoadControl.Controls.Add(LoadControl("Combo_ThemMoi.ascx"));
                     break;
 
                 case "HienThi":

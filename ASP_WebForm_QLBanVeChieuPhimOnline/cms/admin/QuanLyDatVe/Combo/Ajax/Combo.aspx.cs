@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyLichChieu.LichChieu.Ajax
+namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyDatVe.Combo.Ajax
 {
-    public partial class LichChieu : System.Web.UI.Page
+    public partial class Combo : System.Web.UI.Page
     {
         string thaotac = "";
         protected void Page_Load(object sender, EventArgs e)
@@ -23,31 +23,31 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyLichChieu.LichChieu
             //    //Nếu chưa đăng nhập --> return để dừng không cho thực hiện các câu lệnh bên dưới
             //    return;
             //}
-            if (Request.Params["thaotac"] != null)
+            if (Request.Params["ThaoTac"] != null)
             {
-                thaotac = Request.Params["thaotac"];
+                thaotac = Request.Params["ThaoTac"];
             }
 
             switch (thaotac)
             {
-                case "XoaLichChieu":
-                    XoaLichChieu();
+                case "XoaCombo":
+                    XoaCombo();
                     break;
 
             }
         }
 
-        private void XoaLichChieu()
+        private void XoaCombo()
         {
-            string MaLichChieu = "";
-            if (Request.Params["MaLichChieu"] != null)
+            string MaCombo = "";
+            if (Request.Params["MaCombo"] != null)
             {
-                MaLichChieu = Request.Params["MaLichChieu"];
+                MaCombo = Request.Params["MaCombo"];
 
                 //Thực hiện code xóa
                 //B1: Xóa ảnh đại diện đã lưu trên server - tạm b
                 //B2: Xóa dữ liệu trên sqlserver
-                ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu.LichChieu.LichChieu_Delete_By_Ma(int.Parse(MaLichChieu));
+                ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyDatVe.Combo.Combo_Delete(int.Parse(MaCombo));
 
                 // Trả về thông báo 1 thực hiện thành công 2 thực hiện không thành công
                 Response.Write("1");

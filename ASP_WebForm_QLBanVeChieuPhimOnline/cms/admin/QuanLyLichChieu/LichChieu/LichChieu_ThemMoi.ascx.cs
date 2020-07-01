@@ -39,7 +39,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyLichChieu.LichChieu
                 cbThemNhieuLichChieu.Visible = false;
 
                 DataTable dt = new DataTable();
-                dt = ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu.LichChieu.Thongtin_LichChieu_by_MaPhim(int.Parse(id));
+                dt = ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu.LichChieu.Thongtin_LichChieu_by_Ma(int.Parse(id));
                 if (dt.Rows.Count > 0)
                 {
 
@@ -141,7 +141,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyLichChieu.LichChieu
             {
                 #region code nút chỉnh sửa
 
-                ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu.LichChieu.LichChieu_Update_By_MaPhim(int.Parse(ddlGioChieu.SelectedValue), int.Parse(ddlPhim.SelectedValue), int.Parse(ddlPhong.SelectedValue));
+                ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu.LichChieu.LichChieu_Update_By_Ma(int.Parse(id),int.Parse(ddlGioChieu.SelectedValue), int.Parse(ddlPhim.SelectedValue), int.Parse(ddlPhong.SelectedValue));
 
                 //đẩy trang về trang danh sách các damnh mục đã tạo
                 Response.Redirect("Admin.aspx?modul=QLLichChieu&submodul=LichChieu");

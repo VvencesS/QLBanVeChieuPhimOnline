@@ -10,16 +10,16 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
 {
     public class LichChieu
     {
-        #region Phương thức xóa lịch chiếu theo mã phim
+        #region Phương thức xóa lịch chiếu theo mã 
         /// <summary>
-        /// Phương thức xóa lịch chiếu theo mã phim
+        /// Phương thức xóa lịch chiếu theo mã 
         /// </summary>
-        /// <param name="maPhim"></param>
-        public static void LichChieu_Delete_By_MaPhim(int maPhim)
+        /// <param name="maLichChieu"></param>
+        public static void LichChieu_Delete_By_Ma(int maLichChieu)
         {
-            SqlCommand cmd = new SqlCommand("DELETE FROM [dbo].[tb_LichChieu] WHERE MaPhim=@maPhim");
+            SqlCommand cmd = new SqlCommand("DELETE FROM [dbo].[tb_LichChieu] WHERE MaLichChieu=@maLichChieu");
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@maPhim", maPhim);
+            cmd.Parameters.AddWithValue("@maLichChieu", maLichChieu);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
         #endregion
@@ -40,23 +40,26 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
         #endregion
-        #region  Phương thức chỉnh sửa thông tin Lịch chiếu theo mã phim
+        #region  Phương thức chỉnh sửa thông tin Lịch chiếu theo mã
         /// <summary>
-        /// Phương thức chỉnh sửa thông tin Lịch chiếu theo mã phim
+        /// Phương thức chỉnh sửa thông tin Lịch chiếu theo mã 
         /// </summary>
+        /// <param name="maLichChieu"></param>
         /// <param name="maPhim"></param>
         /// <param name="maKTG"></param>
         /// <param name="maPhong"></param>
-        public static void LichChieu_Update_By_MaPhim(int maPhim, int maKTG, int maPhong)
+        public static void LichChieu_Update_By_Ma(int maLichChieu, int maPhim, int maKTG, int maPhong)
         {
             SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_LichChieu] "+
-               "SET [MaKTG] = @maKTG "+
+               "SET maPhim = @maPhim " +
+               ",[MaKTG] = @maKTG " +
                "   ,[MaPhong] = @maPhong " +
-               "WHERE maPhim = @maPhim");
+               "WHERE MaLichChieu=@maLichChieu");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@maKTG", maKTG);
             cmd.Parameters.AddWithValue("@maPhong", maPhong);
             cmd.Parameters.AddWithValue("@maPhim", maPhim);
+            cmd.Parameters.AddWithValue("@maLichChieu", maLichChieu);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
         #endregion
@@ -67,7 +70,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <returns></returns>
         public static DataTable Thongtin_LichChieu()
         {
-            SqlCommand cmd = new SqlCommand("SELECT tb_Phim.TenPhim,tb_Phim.MaPhim,tb_Phim.AnhDaiDien,tb_DinhDang.TenDinhDang,tb_Phong.TenPhong,tb_Phong.MaPhong,tb_KTG.MaKTG,tb_KTG.NgayChieu,tb_KTG.GioChieu " +
+            SqlCommand cmd = new SqlCommand("SELECT MaLichChieu,tb_Phim.TenPhim,tb_Phim.MaPhim,tb_Phim.AnhDaiDien,tb_DinhDang.TenDinhDang,tb_Phong.TenPhong,tb_Phong.MaPhong,tb_KTG.MaKTG,tb_KTG.NgayChieu,tb_KTG.GioChieu " +
               "FROM[dbo].[tb_LichChieu] " +
               "INNER JOIN tb_KTG ON tb_KTG.MaKTG = tb_LichChieu.MaKTG " +
               "INNER JOIN tb_Phim ON tb_Phim.MaPhim = tb_LichChieu.MaPhim " +
@@ -78,17 +81,17 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         }
         #endregion
 
-        #region Phương thức lấy ra danh sách thông tin Lịch chiếu theo mã phim
+        #region Phương thức lấy ra danh sách thông tin Lịch chiếu theo mã 
         /// <summary>
-        /// Phương thức lấy ra danh sách thông tin Lịch chiếu theo mã phim
+        /// Phương thức lấy ra danh sách thông tin Lịch chiếu theo mã 
         /// </summary>
-        /// <param name="maPhim"></param>
+        /// <param name="maLichChieu"></param>
         /// <returns></returns>
-        public static DataTable Thongtin_LichChieu_by_MaPhim(int maPhim)
+        public static DataTable Thongtin_LichChieu_by_Ma(int maLichChieu)
         {
-            SqlCommand cmd = new SqlCommand("SELECT tb_Phim.TenPhim,tb_Phim.MaPhim,tb_Phim.AnhDaiDien,tb_DinhDang.TenDinhDang,tb_Phong.TenPhong,tb_Phong.MaPhong,tb_KTG.MaKTG,tb_KTG.NgayChieu,tb_KTG.GioChieu FROM [dbo].[tb_LichChieu] INNER JOIN tb_KTG ON tb_KTG.MaKTG = tb_LichChieu.MaKTG INNER JOIN tb_Phim ON tb_Phim.MaPhim = tb_LichChieu.MaPhim INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phim.MaDinhDang INNER JOIN tb_Phong ON tb_Phong.MaPhong = tb_LichChieu.MaPhong WHERE tb_LichChieu.MaPhim=@maPhim");
+            SqlCommand cmd = new SqlCommand("SELECT tb_Phim.TenPhim,tb_Phim.MaPhim,tb_Phim.AnhDaiDien,tb_DinhDang.TenDinhDang,tb_Phong.TenPhong,tb_Phong.MaPhong,tb_KTG.MaKTG,tb_KTG.NgayChieu,tb_KTG.GioChieu FROM [dbo].[tb_LichChieu] INNER JOIN tb_KTG ON tb_KTG.MaKTG = tb_LichChieu.MaKTG INNER JOIN tb_Phim ON tb_Phim.MaPhim = tb_LichChieu.MaPhim INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phim.MaDinhDang INNER JOIN tb_Phong ON tb_Phong.MaPhong = tb_LichChieu.MaPhong WHERE tb_LichChieu.MaLichChieu=@maLichChieu");
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@maPhim", maPhim);
+            cmd.Parameters.AddWithValue("@maLichChieu", maLichChieu);
             return SQLDatabase.GetData(cmd);
         }
         #endregion

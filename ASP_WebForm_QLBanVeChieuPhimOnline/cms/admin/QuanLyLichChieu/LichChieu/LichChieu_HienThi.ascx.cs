@@ -23,7 +23,8 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyLichChieu.LichChieu
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 ltrLichChieu.Text += @"
-                <tr id='maDong_" + dt.Rows[i]["MaPhim"] + @"'>
+                <tr id='maDong_" + dt.Rows[i]["MaLichChieu"] + @"'>
+                    <td class='cotTen'>" + dt.Rows[i]["MaLichChieu"] + @"</td>
                     <td class='cotTen'>" + dt.Rows[i]["TenPhim"] + @"</td>
                     <td class='cotAnh'>
                         <img class='anhDaiDien'src='/pic/Phim/" + dt.Rows[i]["AnhDaiDien"] + @"'/>
@@ -34,8 +35,8 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyLichChieu.LichChieu
                     <td class='cotTen'>" + dt.Rows[i]["NgayChieu"].ToString().Substring(0,10) + @"</td>
                     <td class='cotTen'>" + dt.Rows[i]["GioChieu"] + @"</td>
                     <td class='cotCongCu'>
-                        <a href='Admin.aspx?modul=QLLichChieu&submodul=LichChieu&thaotac=ChinhSua&id=" + dt.Rows[i]["MaPhim"] + @"' class='sua' title='Sửa'></a>
-                        <a href='javascript:XoaGhe(" + dt.Rows[i]["MaPhim"] + @")' class='xoa' title='Xóa'></a>
+                        <a href='Admin.aspx?modul=QLLichChieu&submodul=LichChieu&thaotac=ChinhSua&id=" + dt.Rows[i]["MaLichChieu"] + @"' class='sua' title='Sửa'></a>
+                        <a href='javascript:XoaGhe(" + dt.Rows[i]["MaLichChieu"] + @")' class='xoa' title='Xóa'></a>
                     </td>
                 </tr>
                 ";

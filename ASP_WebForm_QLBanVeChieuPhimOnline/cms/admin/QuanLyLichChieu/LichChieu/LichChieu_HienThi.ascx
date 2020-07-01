@@ -7,6 +7,7 @@
 <div class="KhungChuaBang">
     <table class="tbDanhMuc">
         <tr>
+            <th class="cotMa">Mã</th>
             <th class="cotTen">Tên phim</th>
             <th class="cotAnh">Ảnh đại diện phim</th>
             <th class="cotTen">Định dạng</th>
@@ -19,24 +20,3 @@
     </table>
 </div>
 
-<script type="text/javascript">
-    function XoaLichChieu(MaPhim) {
-        if (confirm("Bạn chắc chắn muốn xóa lịch chiếu này?")) {
-            //Viết code xóa danh mục tại đây
-
-            $.post("cms/admin/QuanLyLichChieu/LichChieu/Ajax/LichChieu.aspx",
-                {
-                    "ThaoTac": "XoaLichChieu",
-                    "MaPhim": MaPhim
-                },
-                function (data, status) {
-                    //alert("Data :" + data + "\n Status :" + status);
-                    if (data == 1) {
-                        //thực hiện thành công => ẩn dòng vừa xóa đi
-                        $("#maDong_" + MaPhim).slideUp();
-
-                    }
-                });
-        }
-    }
-</script>

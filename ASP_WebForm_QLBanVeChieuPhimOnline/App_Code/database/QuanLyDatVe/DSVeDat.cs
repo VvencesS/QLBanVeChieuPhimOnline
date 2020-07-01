@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace QuanLyDatVe
+namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyDatVe
 {
     public class DSVeDat
     {

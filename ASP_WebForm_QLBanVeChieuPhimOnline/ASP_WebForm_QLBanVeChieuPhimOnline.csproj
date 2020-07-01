@@ -908,6 +908,7 @@
     <Content Include="cms\admin\js\jquery-3.1.1.min.js" />
     <Content Include="cms\admin\QuanLyDatVe\BaoGia\BaoGiaLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyDatVe\BaoGia\BaoGia_HienThi.ascx" />
+    <Content Include="cms\admin\QuanLyDatVe\Combo\Ajax\Combo.aspx" />
     <Content Include="cms\admin\QuanLyDatVe\Combo\ComboLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyDatVe\Combo\Combo_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyDatVe\Combo\Combo_ThemMoi.ascx" />
@@ -1056,6 +1057,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyDatVe\BaoGia\BaoGia_HienThi.ascx.designer.cs">
       <DependentUpon>BaoGia_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyDatVe\Combo\Ajax\Combo.aspx.cs">
+      <DependentUpon>Combo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyDatVe\Combo\Ajax\Combo.aspx.designer.cs">
+      <DependentUpon>Combo.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyDatVe\Combo\ComboLoadControl.ascx.cs">
       <DependentUpon>ComboLoadControl.ascx</DependentUpon>

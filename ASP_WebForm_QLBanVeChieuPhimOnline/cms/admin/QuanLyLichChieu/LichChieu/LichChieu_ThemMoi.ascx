@@ -32,24 +32,3 @@
         </div>
     </div>
 </div>
-<%--<script type="text/javascript">
-    function LayGioChieuTheoNgayChieu(MaPhim) {
-        if (confirm("Bạn chắc chắn muốn xóa lịch chiếu này?")) {
-            //Viết code xóa danh mục tại đây
-
-            $.post("cms/admin/QuanLyLichChieu/LichChieu/Ajax/LichChieu.aspx",
-                {
-                    "ThaoTac": "XoaLichChieu",
-                    "MaPhim": MaPhim
-                },
-                function (data, status) {
-                    //alert("Data :" + data + "\n Status :" + status);
-                    if (data == 1) {
-                        //thực hiện thành công => ẩn dòng vừa xóa đi
-                        $("#maDong_" + MaPhim).slideUp();
-
-                    }
-                });
-        }
-    }
-</script>--%>
