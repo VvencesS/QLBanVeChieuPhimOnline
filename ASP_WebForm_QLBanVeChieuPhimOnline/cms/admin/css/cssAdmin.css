@@ -253,7 +253,7 @@ table.tbDanhMuc {
     }
 
     table.tbDanhMuc .cotNgayTao {
-        width: 150px
+        width: 75px;
     }
 
     table.tbDanhMuc .cotSoLuong {

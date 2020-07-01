@@ -28,15 +28,20 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTTVaQC
         /// <summary>
         /// Phương thức thêm mới tin tức
         /// </summary>
+        /// <param name="anhDaiDien"></param>
         /// <param name="tieuDe"></param>
+        /// <param name="tomTatTin"></param>
         /// <param name="noiDung"></param>
         /// <param name="maLoaiTinTuc"></param>
-        public static void TinTuc_Insert(string tieuDe, string noiDung, int maLoaiTinTuc,DateTime ngayThem)
+        /// <param name="ngayThem"></param>
+        public static void TinTuc_Insert(string anhDaiDien, string tieuDe, string tomTatTin, string noiDung, int maLoaiTinTuc,DateTime ngayThem)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_TinTuc] ([TieuDe],[NoiDung],[MaLoaiTinTuc],NgayThem) VALUES(@tieuDe,@noiDung,@maLoaiTinTuc,@ngayThem)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_TinTuc] (AnhDaiDien,[TieuDe],TomTatTin,[NoiDung],[MaLoaiTinTuc],NgayThem) VALUES(@anhDaiDien,@tieuDe,@tomTatTin,@noiDung,@maLoaiTinTuc,@ngayThem)");
             cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@anhDaiDien", anhDaiDien);
             cmd.Parameters.AddWithValue("@maLoaiTinTuc", maLoaiTinTuc);
             cmd.Parameters.AddWithValue("@tieuDe", tieuDe);
+            cmd.Parameters.AddWithValue("@tomTatTin", tomTatTin);
             cmd.Parameters.AddWithValue("@noiDung", noiDung);
             cmd.Parameters.AddWithValue("@ngayThem", ngayThem);
             SQLDatabase.ExecuteNoneQuery(cmd);
@@ -47,20 +52,25 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTTVaQC
         /// <summary>
         /// Phương thức chỉnh sửa thông tin tin tức
         /// </summary>
+        /// <param name="anhDaiDien"></param>
         /// <param name="maTinTuc"></param>
         /// <param name="tieuDe"></param>
         /// <param name="noiDung"></param>
         /// <param name="maLoaiTinTuc"></param>
-        public static void TinTuc_Update(int maTinTuc, string tieuDe, string noiDung, int maLoaiTinTuc)
+        public static void TinTuc_Update(string anhDaiDien, int maTinTuc, string tieuDe, string tomTatTin, string noiDung, int maLoaiTinTuc)
         {
             SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_TinTuc] " +
-               "SET[TieuDe] = @tieuDe " +
+               "SET AnhDaiDien = @anhDaiDien" +
+               ",[TieuDe] = @tieuDe " +
+               ",TomTatTin = @tomTatTin" +
                "   ,[NoiDung] = @noiDung " +
                "   ,[MaLoaiTinTuc] = @maLoaiTinTuc WHERE MaTinTuc=@maTinTuc");
             cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@anhDaiDien", anhDaiDien);
             cmd.Parameters.AddWithValue("@maTinTuc", maTinTuc);
             cmd.Parameters.AddWithValue("@maLoaiTinTuc", maLoaiTinTuc);
             cmd.Parameters.AddWithValue("@tieuDe", tieuDe);
+            cmd.Parameters.AddWithValue("@tomTatTin", tomTatTin);
             cmd.Parameters.AddWithValue("@noiDung", noiDung);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
@@ -73,7 +83,9 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTTVaQC
         /// <returns></returns>
         public static DataTable Thongtin_TinTuc()
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[tb_TinTuc]");
+            SqlCommand cmd = new SqlCommand("SELECT [MaTinTuc],[AnhDaiDien],[TieuDe],[TomTatTin],[NoiDung],tb_LoaiTinTuc.[MaLoaiTinTuc],tb_LoaiTinTuc.TenLoaiTinTuc,[NgayThem] " +
+                "FROM[dbo].[tb_TinTuc] " +
+                "INNER JOIN tb_LoaiTinTuc ON tb_LoaiTinTuc.MaLoaiTinTuc = tb_TinTuc.MaLoaiTinTuc");
             cmd.CommandType = CommandType.Text;
             return SQLDatabase.GetData(cmd);
         }

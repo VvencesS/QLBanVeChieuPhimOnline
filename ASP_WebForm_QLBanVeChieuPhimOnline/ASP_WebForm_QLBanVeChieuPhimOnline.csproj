@@ -43,6 +43,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CKEditor.NET">
+      <HintPath>..\..\Code mẫu website asp.net webform\emdep.vn\Bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder">
+      <HintPath>..\..\Code mẫu website asp.net webform\emdep.vn\Bin\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder_FileEditor, Version=2.1.0.1132, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Code mẫu website asp.net webform\emdep.vn\Bin\CKFinder_FileEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder_ImageResize, Version=2.1.0.1132, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Code mẫu website asp.net webform\emdep.vn\Bin\CKFinder_ImageResize.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder_Watermark, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Code mẫu website asp.net webform\emdep.vn\Bin\CKFinder_Watermark.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -60,6 +78,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebApplication2">
+      <HintPath>..\..\Code mẫu website asp.net webform\emdep.vn\Bin\WebApplication2.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -958,6 +979,7 @@
     <Content Include="cms\admin\QuanLyTTVaQC\QuangCao\QuangCao_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyTTVaQC\QuangCao\QuangCao_ThemMoi.ascx" />
     <Content Include="cms\admin\QuanLyTTVaQC\QuanLyTTVaQCLoadControl.ascx" />
+    <Content Include="cms\admin\QuanLyTTVaQC\TinTuc\Ajax\TinTuc.aspx" />
     <Content Include="cms\admin\QuanLyTTVaQC\TinTuc\TinTucLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyTTVaQC\TinTuc\TinTuc_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyTTVaQC\TinTuc\TinTuc_ThemMoi.ascx" />
@@ -1532,6 +1554,13 @@
     <Compile Include="cms\admin\QuanLyTTVaQC\QuanLyTTVaQCLoadControl.ascx.designer.cs">
       <DependentUpon>QuanLyTTVaQCLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\QuanLyTTVaQC\TinTuc\Ajax\TinTuc.aspx.cs">
+      <DependentUpon>TinTuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyTTVaQC\TinTuc\Ajax\TinTuc.aspx.designer.cs">
+      <DependentUpon>TinTuc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\QuanLyTTVaQC\TinTuc\TinTucLoadControl.ascx.cs">
       <DependentUpon>TinTucLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1591,6 +1620,7 @@
     <Folder Include="pic\Phim\" />
     <Folder Include="pic\QuangCao\" />
     <Folder Include="pic\ThanhVien\" />
+    <Folder Include="pic\TinTuc\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
