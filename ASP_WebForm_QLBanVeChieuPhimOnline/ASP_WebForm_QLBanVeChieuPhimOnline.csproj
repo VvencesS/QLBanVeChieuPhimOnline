@@ -922,6 +922,7 @@
     <Content Include="cms\admin\QuanLyLichChieu\Ghe\GheLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\Ghe\Ghe_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\Ghe\Ghe_ThemMoi.ascx" />
+    <Content Include="cms\admin\QuanLyLichChieu\KhungThoiGian\Ajax\KhungThoiGian.aspx" />
     <Content Include="cms\admin\QuanLyLichChieu\KhungThoiGian\KTGLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\KhungThoiGian\KTG_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\KhungThoiGian\KTG_ThemMoi.ascx" />
@@ -1152,6 +1153,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyLichChieu\Ghe\Ghe_ThemMoi.ascx.designer.cs">
       <DependentUpon>Ghe_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyLichChieu\KhungThoiGian\Ajax\KhungThoiGian.aspx.cs">
+      <DependentUpon>KhungThoiGian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyLichChieu\KhungThoiGian\Ajax\KhungThoiGian.aspx.designer.cs">
+      <DependentUpon>KhungThoiGian.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyLichChieu\KhungThoiGian\KTGLoadControl.ascx.cs">
       <DependentUpon>KTGLoadControl.ascx</DependentUpon>
