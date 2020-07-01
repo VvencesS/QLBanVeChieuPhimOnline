@@ -73,7 +73,7 @@
                             <ul class="sub-menu">
                                 <li><a href="Admin.aspx?modul=QLDatVe&submodul=Combo">Combo</a></li>
                                 <li><a href="Admin.aspx?modul=QLDatVe&submodul=Gia">Giá</a></li>
-                                <li><a href="Admin.aspx?modul=QLDatVe&submodul=BaoGia">Báo giá</a></li>
+                                <%--<li><a href="Admin.aspx?modul=QLDatVe&submodul=BaoGia">Báo giá</a></li>--%>
                                 <li><a href="Admin.aspx?modul=QLDatVe&submodul=Ve">Vé</a></li>
                             </ul>
                         </li>

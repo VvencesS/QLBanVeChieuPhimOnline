@@ -1013,6 +1013,7 @@
     <Compile Include="App_Code\database\QuanLyDatVe\DSVeDat.cs" />
     <Compile Include="App_Code\database\QuanLyDatVe\Gia.cs" />
     <Compile Include="App_Code\database\QuanLyDatVe\GiaVeDat.cs" />
+    <Compile Include="App_Code\database\QuanLyDatVe\Ve.cs" />
     <Compile Include="App_Code\database\QuanLyLichChieu\Ghe.cs" />
     <Compile Include="App_Code\database\QuanLyLichChieu\LoaiGhe.cs" />
     <Compile Include="App_Code\database\QuanLyLichChieu\QuanHuyen.cs" />
