@@ -28,16 +28,20 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <summary>
         /// Phương thức thêm mới Rạp
         /// </summary>
+        /// <param name="anhDaiDien"></param>
         /// <param name="tenRap"></param>
         /// <param name="gioiThieu"></param>
+        /// <param name="diaChi"></param>
         /// <param name="sdtRieng"></param>
         /// <param name="maXaPhuong"></param>
-        public static void Rap_Inser(string tenRap, int gioiThieu, int sdtRieng, int maXaPhuong)
+        public static void Rap_Inser(string anhDaiDien, string tenRap, string gioiThieu, string diaChi, string sdtRieng, int maXaPhuong)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_Rap] ([TenRap],[GioiThieu],[SDTRieng],[MaXaPhuong]) VALUES(@tenRap,@gioThieu,@sdtRieng,@maXaPhuong)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_Rap] (AnhDaiDien,[TenRap],[GioiThieu],DiaChi,[SDTRieng],[MaXaPhuong]) VALUES(@tenRap,@gioThieu,@sdtRieng,@maXaPhuong)");
             cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@anhDaiDien", anhDaiDien);
             cmd.Parameters.AddWithValue("@tenRap", tenRap);
             cmd.Parameters.AddWithValue("@gioiThieu", gioiThieu);
+            cmd.Parameters.AddWithValue("@diaChi", diaChi);
             cmd.Parameters.AddWithValue("@sdtRieng", sdtRieng);
             cmd.Parameters.AddWithValue("@maXaPhuong", maXaPhuong);
             SQLDatabase.ExecuteNoneQuery(cmd);
@@ -54,17 +58,21 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <param name="soCotMax"></param>
         /// <param name="maDinhDang"></param>
         /// <param name="maRap"></param>
-        public static void Rap_Update(int maRap, string tenRap, int gioiThieu, int sdtRieng, int maXaPhuong)
+        public static void Rap_Update(int maRap, string anhDaiDien, string tenRap, string gioiThieu, string diaChi, string sdtRieng, int maXaPhuong)
         {
             SqlCommand cmd = new SqlCommand("UPDATE[dbo].[tb_Rap] "+
-               "SET[TenRap] = @tenRap "+
-               "  ,[GioiThieu] = @gioiThieu"+
+               "SET AnhDaiDien=@anhDaiDien" +
+               ",[TenRap] = @tenRap "+
+               "  ,[GioiThieu] = @gioiThieu" +
+               ",DiaChi=@diaChi"+
                "   ,[SDTRieng] = @sdtRieng "+
                "  ,[MaXaPhuong] = @maXaPhuong "+
                "WHERE MaRap = @maRap");
             cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@anhDaiDien", anhDaiDien);
             cmd.Parameters.AddWithValue("@tenRap", tenRap);
             cmd.Parameters.AddWithValue("@gioiThieu", gioiThieu);
+            cmd.Parameters.AddWithValue("@diaChi", diaChi);
             cmd.Parameters.AddWithValue("@sdtRieng", sdtRieng);
             cmd.Parameters.AddWithValue("@maXaPhuong", maXaPhuong);
             cmd.Parameters.AddWithValue("@maRap", maRap);
@@ -79,7 +87,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <returns></returns>
         public static DataTable Thongtin_Rap()
         {
-            SqlCommand cmd = new SqlCommand("SELECT [MaRap],[TenRap],[GioiThieu],[SDTRieng],tb_XaPhuong.TenXaPhuong,tb_QuanHuyen.TenQuanHuyen,tb_TinhThanhPho.TenTinhThanhPho "+
+            SqlCommand cmd = new SqlCommand("SELECT [MaRap],AnhDaiDien,[TenRap],[GioiThieu],DiaChi,[SDTRieng],tb_XaPhuong.TenXaPhuong,tb_QuanHuyen.TenQuanHuyen,tb_TinhThanhPho.TenTinhThanhPho "+
               "FROM[dbo].[tb_Rap] "+
               "INNER JOIN tb_XaPhuong ON tb_XaPhuong.MaXaPhuong = tb_Rap.MaXaPhuong "+
               "INNER JOIN tb_QuanHuyen ON tb_QuanHuyen.MaQuanHuyen = tb_XaPhuong.MaQuanHuyen "+
@@ -97,7 +105,8 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <returns></returns>
         public static DataTable Thongtin_Rap_by_Ma(int maRap)
         {
-            SqlCommand cmd = new SqlCommand("SELECT [MaRap],[TenRap],[GioiThieu],[SDTRieng],tb_XaPhuong.TenXaPhuong,tb_QuanHuyen.TenQuanHuyen,tb_TinhThanhPho.TenTinhThanhPho " +
+            SqlCommand cmd = new SqlCommand("SELECT [MaRap],AnhDaiDien,[TenRap],[GioiThieu],DiaChi,[SDTRieng],tb_XaPhuong.TenXaPhuong,tb_QuanHuyen.TenQuanHuyen,tb_TinhThanhPho.TenTinhThanhPho, " +
+                "tb_XaPhuong.MaXaPhuong,tb_QuanHuyen.MaQuanHuyen,tb_TinhThanhPho.MaTinhThanhPho " +
               "FROM[dbo].[tb_Rap] " +
               "INNER JOIN tb_XaPhuong ON tb_XaPhuong.MaXaPhuong = tb_Rap.MaXaPhuong " +
               "INNER JOIN tb_QuanHuyen ON tb_QuanHuyen.MaQuanHuyen = tb_XaPhuong.MaQuanHuyen " +

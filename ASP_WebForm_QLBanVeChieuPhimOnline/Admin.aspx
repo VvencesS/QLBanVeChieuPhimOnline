@@ -82,7 +82,9 @@
             </div>
 
             <%--Phần nội dung trang--%>
-            <uc1:AdminLoadControl runat="server" ID="AdminLoadControl" />
+            <div class="main">
+                <uc1:AdminLoadControl runat="server" ID="AdminLoadControl" />
+            </div>
         </div>
     </form>
     <script src="cms/admin/js/jquery-3.1.1.min.js"></script>

@@ -30,7 +30,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <param name="soGhe"></param>
         /// <param name="soHang"></param>
         /// <param name="soCot"></param>
-        public static void SoGhe_Insert(string soGhe, int soHang, int soCot)
+        public static void SoGhe_Insert(string soGhe, string soHang, string soCot)
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_SoGhe] ([SoGhe],[SoHang],[SoCot]) "+
                 "VALUES(@soGhe,@soHang,@soCot)");
@@ -48,7 +48,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <param name="soGhe"></param>
         /// <param name="soHang"></param>
         /// <param name="soCot"></param>
-        public static void SoGhe_Update(string soGhe, int soHang, int soCot)
+        public static void SoGhe_Update(string soGhe, string soHang, string soCot)
         {
             SqlCommand cmd = new SqlCommand("UPDATE [dbo].[tb_SoGhe] "+
                "SET [SoHang] = @soHang "+
@@ -79,7 +79,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// </summary>
         /// <param name="soGhe"></param>
         /// <returns></returns>
-        public static DataTable Thongtin_SoGhe_by_Ma(int soGhe)
+        public static DataTable Thongtin_SoGhe_by_Ma(string soGhe)
         {
             SqlCommand cmd = new SqlCommand("SELECT * FROM tb_SoGhe WHERE soGhe=@soGhe");
             cmd.CommandType = CommandType.Text;

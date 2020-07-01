@@ -23,9 +23,9 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyTTVaQC.TinTuc.Ajax
             //    //Nếu chưa đăng nhập --> return để dừng không cho thực hiện các câu lệnh bên dưới
             //    return;
             //}
-            if (Request.Params["ThaoTac"] != null)
+            if (Request.Params["thaotac"] != null)
             {
-                thaotac = Request.Params["ThaoTac"];
+                thaotac = Request.Params["thaotac"];
             }
 
             switch (thaotac)

@@ -896,6 +896,7 @@
     <Content Include="ckeditor\themes\default\theme.js" />
     <Content Include="cms\admin\AdminLoadControl.ascx" />
     <Content Include="cms\admin\css\add.jpg" />
+    <Content Include="cms\admin\css\beta-slide-4.jpg" />
     <Content Include="cms\admin\css\check.jpg" />
     <Content Include="cms\admin\css\cssAdmin.css" />
     <Content Include="cms\admin\css\cssDangNhap.css" />
@@ -930,9 +931,11 @@
     <Content Include="cms\admin\QuanLyLichChieu\Phong\Phong_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\Phong\Phong_ThemMoi.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\QuanLyLichChieuLoadControl.ascx" />
+    <Content Include="cms\admin\QuanLyLichChieu\Rap\Ajax\Rap.aspx" />
     <Content Include="cms\admin\QuanLyLichChieu\Rap\RapLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\Rap\Rap_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\Rap\Rap_ThemMoi.ascx" />
+    <Content Include="cms\admin\QuanLyLichChieu\SoGhe\Ajax\SoGhe.aspx" />
     <Content Include="cms\admin\QuanLyLichChieu\SoGhe\SoGheLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\SoGhe\SoGhe_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\SoGhe\SoGhe_ThemMoi.ascx" />
@@ -1211,6 +1214,13 @@
     <Compile Include="cms\admin\QuanLyLichChieu\QuanLyLichChieuLoadControl.ascx.designer.cs">
       <DependentUpon>QuanLyLichChieuLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\QuanLyLichChieu\Rap\Ajax\Rap.aspx.cs">
+      <DependentUpon>Rap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyLichChieu\Rap\Ajax\Rap.aspx.designer.cs">
+      <DependentUpon>Rap.aspx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\QuanLyLichChieu\Rap\RapLoadControl.ascx.cs">
       <DependentUpon>RapLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1231,6 +1241,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyLichChieu\Rap\Rap_ThemMoi.ascx.designer.cs">
       <DependentUpon>Rap_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyLichChieu\SoGhe\Ajax\SoGhe.aspx.cs">
+      <DependentUpon>SoGhe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyLichChieu\SoGhe\Ajax\SoGhe.aspx.designer.cs">
+      <DependentUpon>SoGhe.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyLichChieu\SoGhe\SoGheLoadControl.ascx.cs">
       <DependentUpon>SoGheLoadControl.ascx</DependentUpon>
@@ -1619,6 +1636,7 @@
     <Folder Include="cms\display\" />
     <Folder Include="pic\Phim\" />
     <Folder Include="pic\QuangCao\" />
+    <Folder Include="pic\Rap\" />
     <Folder Include="pic\ThanhVien\" />
     <Folder Include="pic\TinTuc\" />
   </ItemGroup>

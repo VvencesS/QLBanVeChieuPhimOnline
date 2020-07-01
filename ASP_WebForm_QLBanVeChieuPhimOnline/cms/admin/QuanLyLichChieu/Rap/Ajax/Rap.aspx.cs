@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyTTVaQC.QuangCao.Ajax
+namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyLichChieu.Rap.Ajax
 {
-    public partial class QuangCao : System.Web.UI.Page
+    public partial class Rap : System.Web.UI.Page
     {
         string thaotac = "";
         protected void Page_Load(object sender, EventArgs e)
@@ -30,24 +30,24 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyTTVaQC.QuangCao.Aja
 
             switch (thaotac)
             {
-                case "XoaQuangCao":
-                    XoaQuangCao();
+                case "XoaRap":
+                    XoaRap();
                     break;
 
             }
         }
 
-        private void XoaQuangCao()
+        private void XoaRap()
         {
-            string MaQuangCao = "";
-            if (Request.Params["MaQuangCao"] != null)
+            string MaRap = "";
+            if (Request.Params["MaRap"] != null)
             {
-                MaQuangCao = Request.Params["MaQuangCao"];
+                MaRap = Request.Params["MaRap"];
 
                 //Thực hiện code xóa
                 //B1: Xóa ảnh đại diện đã lưu trên server - tạm b
                 //B2: Xóa dữ liệu trên sqlserver
-                ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTTVaQC.QuangCao.QuangCao_Delete(int.Parse(MaQuangCao));
+                ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu.Rap.Rap_Delete(int.Parse(MaRap));
 
                 // Trả về thông báo 1 thực hiện thành công 2 thực hiện không thành công
                 Response.Write("1");
