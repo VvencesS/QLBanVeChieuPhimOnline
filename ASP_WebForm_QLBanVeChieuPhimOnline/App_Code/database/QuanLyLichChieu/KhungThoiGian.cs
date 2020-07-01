@@ -85,5 +85,19 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        #region Phương thức lấy ra danh sách thông tin giờ chiếu theo ngày chiếu
+        /// <summary>
+        /// Phương thức lấy ra danh sách thông tin giờ chiếu theo ngày chiếu
+        /// </summary>
+        /// <param name="ngayChieu"></param>
+        /// <returns></returns>
+        public static DataTable Thongtin_KTG_by_NgayChieu(DateTime ngayChieu)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT MaKTG,GioChieu FROM [dbo].[tb_KTG] WHERE NgayChieu=@ngayChieu");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@ngayChieu", ngayChieu);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
     }
 }

@@ -926,6 +926,7 @@
     <Content Include="cms\admin\QuanLyLichChieu\KhungThoiGian\KTGLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\KhungThoiGian\KTG_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\KhungThoiGian\KTG_ThemMoi.ascx" />
+    <Content Include="cms\admin\QuanLyLichChieu\LichChieu\Ajax\LichChieu.aspx" />
     <Content Include="cms\admin\QuanLyLichChieu\LichChieu\LichChieuLoadControl.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\LichChieu\LichChieu_HienThi.ascx" />
     <Content Include="cms\admin\QuanLyLichChieu\LichChieu\LichChieu_ThemMoi.ascx" />
@@ -1181,6 +1182,13 @@
     </Compile>
     <Compile Include="cms\admin\QuanLyLichChieu\KhungThoiGian\KTG_ThemMoi.ascx.designer.cs">
       <DependentUpon>KTG_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyLichChieu\LichChieu\Ajax\LichChieu.aspx.cs">
+      <DependentUpon>LichChieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuanLyLichChieu\LichChieu\Ajax\LichChieu.aspx.designer.cs">
+      <DependentUpon>LichChieu.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuanLyLichChieu\LichChieu\LichChieuLoadControl.ascx.cs">
       <DependentUpon>LichChieuLoadControl.ascx</DependentUpon>

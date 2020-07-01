@@ -67,7 +67,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <returns></returns>
         public static DataTable Thongtin_LichChieu()
         {
-            SqlCommand cmd = new SqlCommand("SELECT tb_Phim.TenPhim,tb_Phim.AnhDaiDien,tb_DinhDang.TenDinhDang,tb_Phong.TenPhong,tb_KTG.NgayChieu,tb_KTG.GioChieu " +
+            SqlCommand cmd = new SqlCommand("SELECT tb_Phim.TenPhim,tb_Phim.MaPhim,tb_Phim.AnhDaiDien,tb_DinhDang.TenDinhDang,tb_Phong.TenPhong,tb_Phong.MaPhong,tb_KTG.MaKTG,tb_KTG.NgayChieu,tb_KTG.GioChieu " +
               "FROM[dbo].[tb_LichChieu] " +
               "INNER JOIN tb_KTG ON tb_KTG.MaKTG = tb_LichChieu.MaKTG " +
               "INNER JOIN tb_Phim ON tb_Phim.MaPhim = tb_LichChieu.MaPhim " +
@@ -86,13 +86,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <returns></returns>
         public static DataTable Thongtin_LichChieu_by_MaPhim(int maPhim)
         {
-            SqlCommand cmd = new SqlCommand("SELECT tb_Phim.TenPhim,tb_Phim.AnhDaiDien,tb_DinhDang.TenDinhDang,tb_Phong.TenPhong,tb_KTG.NgayChieu,tb_KTG.GioChieu " +
-              "FROM[dbo].[tb_LichChieu] " +
-              "INNER JOIN tb_KTG ON tb_KTG.MaKTG = tb_LichChieu.MaKTG " +
-              "INNER JOIN tb_Phim ON tb_Phim.MaPhim = tb_LichChieu.MaPhim " +
-              "INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phim.MaDinhDang " +
-              "INNER JOIN tb_Phong ON tb_Phong.MaPhong = tb_LichChieu.MaPhong" +
-              "WHERe tb_LichChieu.MaPhim=@maPhim");
+            SqlCommand cmd = new SqlCommand("SELECT tb_Phim.TenPhim,tb_Phim.MaPhim,tb_Phim.AnhDaiDien,tb_DinhDang.TenDinhDang,tb_Phong.TenPhong,tb_Phong.MaPhong,tb_KTG.MaKTG,tb_KTG.NgayChieu,tb_KTG.GioChieu FROM [dbo].[tb_LichChieu] INNER JOIN tb_KTG ON tb_KTG.MaKTG = tb_LichChieu.MaKTG INNER JOIN tb_Phim ON tb_Phim.MaPhim = tb_LichChieu.MaPhim INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phim.MaDinhDang INNER JOIN tb_Phong ON tb_Phong.MaPhong = tb_LichChieu.MaPhong WHERE tb_LichChieu.MaPhim=@maPhim");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@maPhim", maPhim);
             return SQLDatabase.GetData(cmd);

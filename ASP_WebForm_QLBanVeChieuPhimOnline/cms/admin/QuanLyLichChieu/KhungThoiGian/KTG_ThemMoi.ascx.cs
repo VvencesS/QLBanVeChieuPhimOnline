@@ -36,7 +36,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyLichChieu.KhungThoi
                 dt = ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu.KhungThoiGian.Thongtin_KTG_by_MaKTG(int.Parse(id));
                 if (dt.Rows.Count > 0)
                 {
-                    tbNgayChieu.Text = dt.Rows[0]["NgayChieu"].ToString();
+                    tbNgayChieu.Text = dt.Rows[0]["NgayChieu"].ToString().Substring(0, 10);
                     tbGioChieu.Text = dt.Rows[0]["GioChieu"].ToString();
                 }
             }
