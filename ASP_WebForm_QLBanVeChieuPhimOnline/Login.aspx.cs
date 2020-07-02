@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,6 +12,25 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+        protected void lbtDangNhap_Click(object sender, EventArgs e)
+        {
+            //kiểm tra database có tên đăng nhập và mật khẩu này không?=>có=>xác nhận đăng nhập thành công
+            DataTable dt = ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTaiKhoan.NhanVien.Login(tbTenDangNhap.Text.Trim(), App_Code.MaHoa.MaHoaMD5(tbMatKhau.Text.Trim()));
+            if (dt.Rows.Count > 0)
+            {
+                //Đăng nhập thành công --> Lưu giá trị vào session để đánh dấu đăng nhập thành công
+                Session["DangNhap"] = "1"; //Thể hiện đã đăng nhập thành công
+
+                //Gán thêm thông tin tài khoản đã đăng nhập
+                Session["TenDangNhap"] = dt.Rows[0]["HoTen"];
+                Response.Redirect("/Admin.aspx");
+            }
+            else
+            {
+                ltrThongBao.Text = "<div class='ThongBao'>Tên đăng nhập hoặc mật khẩu không chính xác!</div>";
+            }
 
         }
     }

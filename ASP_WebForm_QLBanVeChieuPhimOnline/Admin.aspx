@@ -21,8 +21,8 @@
                             <img src="pic/Logo/logo.png" /></a>
                     </div>
                     <div class="accountMenu">
-                        Xin chào Admin | Đăng xuất
-                        <%--Xin chào:<asp:Literal ID="ltrTenDangNhap" runat="server"></asp:Literal> | <asp:LinkButton ID="lbtDangXuat" runat="server" OnClick="lbtDangXuat_Click">Đăng xuất</asp:LinkButton>--%>
+                        <%--Xin chào Admin | Đăng xuất--%>
+                        Xin chào:<asp:Literal ID="ltrTenDangNhap" runat="server"></asp:Literal> | <asp:LinkButton ID="lbtDangXuat" runat="server" OnClick="lbtDangXuat_Click">Đăng xuất</asp:LinkButton>
                     </div>
                 </div>
             </div>
