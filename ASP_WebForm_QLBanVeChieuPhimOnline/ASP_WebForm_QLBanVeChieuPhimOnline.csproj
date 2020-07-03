@@ -3580,6 +3580,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="js\" />
     <Folder Include="pic\Phim\" />
     <Folder Include="pic\QuangCao\" />
