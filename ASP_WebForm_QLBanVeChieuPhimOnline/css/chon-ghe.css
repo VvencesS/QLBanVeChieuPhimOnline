@@ -1,0 +1,905 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#dieukhoan-pop-up h3 {
+    margin-top: 0px;
+}
+
+a.container-checkbox {
+    font-weight: 400;
+    font-size: 14px;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.fancybox--container {
+    display: none;
+}
+
+.open-fancybox--container {
+    display: block;
+}
+
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#dieukhoan-pop-up .product-pop-up {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container-checkbox input:checked ~ .checkmark {
+    background-color: #03599d;
+}
+
+span.checkmark {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ccc;
+    border-radius: 11px !important;
+}
+
+label.container-checkbox {
+    line-height: 25px;
+}
+
+#dieukhoan-pop-up .modal-footer .note-commit {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+
+.clearfix.margin-bottom-10 {
+    margin-bottom: 10px !important;
+}
+
+#dieukhoan-pop-up .modal-header {
+    padding: 0 15px;
+    border-bottom: 1px solid #e5e5e5;
+    min-height: 16.42857143px;
+}
+
+div#dieukhoan-pop-up {
+    background: #fff;
+    margin: auto;
+    position: relative;
+    /* margin-top: 100px; */
+    z-index: 10000;
+    cursor: grab;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.note-before-next, .note-refund {
+    font-size: 14px;
+    font-style: italic;
+    text-align: left;
+    padding-left: 15px;
+    color: #000000;
+}
+
+[type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
+    position: relative;
+    padding-left: 10px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+
+.col-md-6 {
+    width: 37.5%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.payment-seat-row > .row {}
+
+.hiden {
+     display: none; 
+}
+
+div#voucher-items {
+    margin-bottom: 8px;
+    float: left;
+    width: 100%;
+}
+
+.btn-mua-ve {
+    padding: 10px 40px;
+    position: relative;
+    border-radius: 4px !important;
+    border: 1px solid transparent;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: Oswald, sans-serif !important;
+}
+
+.btn-mua-ve {
+    background-image: linear-gradient(to right, #fc3606 0%, #fda085 51%, #fc7704 100%) !important;
+}
+
+.btn-mua-ve:hover {
+    background-image: linear-gradient(to right, #fc7704 0%, #fda085 51%, #fc3606 100%) !important;
+    background-size: 100% auto;
+}
+
+.voucher-code-input, .voucher-pin-input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgb(149, 149,149);
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+#voucher .item-title {
+    font-family: SourceSansPro;
+    font-size: 16px;
+    line-height: 23px;
+    float: left;
+    color: rgb(73,76,98);
+}
+
+label {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.voucher-code-title, .voucher-pin-title {
+    width: 100%;
+}
+
+span.input-voucher {
+    font-size: 15px;
+}
+
+span.input-voucher:hover {
+    text-decoration: underline;
+}
+
+.combo-quantity {
+    color: rgb(30,31,40);
+}
+
+.btn-plus {
+    width: 22px;
+    height: 22px;
+    background-image: url(../image/plus.png) !important;
+    background-size: 22px 22px;
+}
+
+.btn-minus {
+    width: 22px;
+    height: 22px;
+    background-image: url(../image/minus.png) !important;
+    background-size: 22px 22px;
+}
+
+.combo-title {
+    font-family: SourceSansPro;
+    font-weight: 600;
+    text-align: left;
+    color: #1e1f28;
+}
+
+.item-outer-pannel td {
+    padding: 20px 10px !important;
+    vertical-align: middle !important;
+    font-size: 16px;
+}
+
+.table-combo-list > tbody > tr > td {
+    border-bottom: 1px solid #ddd;
+    line-height: 1.42857143;
+}
+
+.combo-item-price {
+    text-align: right;
+}
+
+.combo-item-des {
+    font-family: SourceSansPro;
+    text-align: center;
+    color: #494c62;
+}
+
+tr.item-outer-pannel {
+    height: 50px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+table thead tr th {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    line-height: 1.42857143;
+}
+
+.td-bg-1 {
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.payment-page-title {
+    margin-bottom: 20px !important;
+}
+
+hr {
+    margin: 35px 0px;
+    border-top: 1px solid #ccc;
+    border-bottom: 0;
+}
+
+.payment-seat-row > .row {}
+
+.item-seat-money {
+    width: 18.75%;
+    float: left;
+    font-family: SourceSansPro;
+    font-size: 18px;
+    text-align: right;
+    color: #494c62;
+    position: relative;
+    min-height: 1px;
+}
+
+.item-seat-quantity {
+    width: 31.25%;
+    float: left;
+    font-family: SourceSansPro;
+    font-size: 18px;
+    text-align: right;
+    color: #494c62;
+    position: relative;
+    min-height: 1px;
+}
+
+.item-seat-quantity {}
+
+.item-seat-type {
+    font-family: SourceSansPro;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    color: #1e1f28;
+    text-transform: uppercase;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    width: 50%;
+}
+
+.user-info-item-label {
+    font-family: SourceSansPro;
+    font-size: 16px;
+    font-weight: 600;
+    color: #494c62;
+}
+
+.bold {
+    font-weight: 700 !important;
+}
+
+.user-info-item {
+    width: 31.25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    font-size: 16px;
+}
+
+.total-money-value {
+    font-family: Oswald;
+    font-size: 20px;
+    text-align: right;
+    color: #03599d;
+    margin-top: 40px;
+    padding-right: 10px;
+}
+
+.seat-normal-quantity, .seat-vip-quantity, .seat-double-quantity {
+    font-family: Oswald;
+    font-size: 16px;
+    text-align: right;
+    color: #1e1f28;
+    margin-top: 20px;
+    margin-right: 10px;
+    float: right;
+}
+
+.main-panel .container {display: flex;}
+
+.panel-film-info a.btn-mua-ve {
+    padding: 5px 40px;
+    position: relative;
+    border-radius: 4px !important;
+}
+
+.btn-thanh-toan {
+    width: 65px !important;
+    margin: auto;
+}
+
+#dieukhoan-pop-up .btn-thanh-toan {
+    padding: 5px 40px;
+}
+
+.btn-back, .dieu-khoan-pop-up {
+    display: none;
+}
+
+div {
+    display: block;
+}
+
+#dieukhoan-pop-up .modal-footer {
+    padding: 10px 15px;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+}
+
+#dieukhoan-pop-up .modal-body {
+    position: relative;
+    padding: 10px 15px;
+    padding-bottom: 0px;
+    font-family: SourceSansPro !important;
+    font-size: 15px;
+}
+
+.fancybox-dieu-khoan-pop-up {
+    width: 100%;
+    height: 1500px;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background: #00000085;
+}
+
+.open-payment-seat-row {
+    display: block !important;
+}
+
+.payment-seat-row {
+    display: none;
+}
+
+.close-choose-seat-row {
+    display: none;
+}
+
+.ticket-selected > .row {}
+
+.ticket-select > .row {
+    display: flex;
+}
+
+.combo-total-money-value, .coupon-discount, .payment-amount {font-size: 20px;}
+
+.payment-form > .row > .item-seat-quantity {
+    width: 81.25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+.ticket-selected {
+}
+
+.ticket-selected.ticket-selected-quantity-detail {
+    margin-top: 30px;
+}
+
+.total-money-name {
+    width: 18.75%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    color: rgb(253,40,2) !important;
+    font-size: 20px !important;
+    font-family: SourceSansPro;
+    text-align: right;
+}
+
+.point-value, .point-money {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+#beta-point .point {
+    width: 160.16px;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: SourceSansPro !important;
+}
+
+#voucher .info-detail {
+    width: 760.63px;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.button {
+    width: 160.16px;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+#voucher .input {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 265.23px;
+    float: left;
+}
+
+.option-title {
+    font-family: SourceSansPro;
+    font-size: 18px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.tab-35 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+}
+
+.payment-user-info {
+    font-family: SourceSansPro !important;
+}
+
+.payment-page-title .page-title {
+    font-family: Oswald;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 35px;
+    height: 35px;
+    float: left;
+    margin-left: 12px;
+    color: #494c62;
+}
+
+.seat-quantity {
+}
+
+.main-panel {
+    height: 100%;
+}
+
+.panel-film-info .text-center.padding-bottom-30 {
+    padding-bottom: 30px !important;
+    width: 100%;
+    float: left;
+}
+
+.btn-back, .dieu-khoan-pop-up {width: 65px !important;float: left;}
+
+.btn-back {
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+hr.border-dashed {
+    border-top-width: 2px !important;
+    border-style: dashed !important;
+    margin: 35px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 0;
+}
+
+.panel-film-info .bottom .bottom-text {
+    width: 50%;
+    float: left;
+    padding: 10px 0px;
+}
+
+.panel-film-info .bottom ul li {
+    padding: 10px 0px;
+}
+
+.panel-film-info ul {
+    font-family: SourceSansPro !important;
+    padding: 10px 30px !important;
+    font-size: 14px;
+    list-style: none;
+    margin-bottom: 10px !important;
+}
+
+.panel-film-info .bottom {
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.pi-img-wrapper {
+    position: relative;
+}
+
+.panel-film-info .top {
+    width: 50%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+.panel-film-info > .bg-white > .top > h3, .panel-film-info > .bg-white > .top > h4 {
+    padding-left: 30px;
+}
+
+.bg-white {
+    background-color: #fff !important;
+    position: absolute;
+}
+
+.panel-film-info {
+    width: 328.38px;
+    margin-bottom: 35px !important;
+    /* float: left; */
+    position: relative;
+    min-height: 1px;
+    /* background-color: #fff !important; */
+    padding-left: 15px;
+}
+
+.scroll-panel-film-info-1 {
+    animation: scroll_panel_film_info_1 1s forwards;
+}
+
+@-webkit-keyframes scroll_panel_film_info_1 {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(150px);
+    }
+}
+
+.scroll-panel-film-info-2 {
+    animation: scroll_panel_film_info_2 1s forwards;
+}
+
+@-webkit-keyframes scroll_panel_film_info_2 {
+    0% {
+        transform: translateY(150px);
+    }
+    100% {
+        transform: translateY(250px);
+    }
+}
+
+.scroll-panel-film-info-3 {
+    animation: scroll_panel_film_info_3 1s forwards;
+}
+
+@-webkit-keyframes scroll_panel_film_info_3 {
+    0% {
+        transform: translateY(250px);
+    }
+    100% {
+        transform: translateY(350px);
+    }
+}
+
+.time-to-left-value {
+    font-family: Oswald;
+    font-size: 37.9px;
+    text-align: right;
+    color: #1e1f28;
+    margin-top: 19px;
+}
+
+.total-money-label, .time-to-left-label {
+    font-family: Oswald;
+    font-size: 18px;
+    text-align: left;
+    color: #494c62;
+    padding-left: 15px;
+}
+
+span.seat-type-name {
+    width: 100%;
+    float: left;
+    padding-left: 5px;
+    color: #494c62;
+    font-family: Oswald;
+    font-size: 18px;
+    text-align: left;
+}
+
+.seat-type-panel .seat-img {
+    width: 50%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+.seat-type-panel .time-left {
+    width: 18.75%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+.seat-type-panel .seat-type.seat-type-standard {
+    width: 80.25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    font-family: SourceSansPro !important;
+}
+
+.choose-seat-row .seat-type {
+    width: 18.75% !important;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+.seat-type-panel .total-money, .time-left {
+    border-left: solid 2px #d8d8d8;
+    border-top: 0px;
+    height: 90px;
+}
+
+.seat-type-panel .type-name, .seat-type-double .type-name {
+    width: 50%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+seat-type-double .type-name {}
+
+.seat-type-vip .type-name, .seat-type-double .type-name {
+    margin-bottom: 27px;
+}
+
+.seat-type-panel {
+    background-color: #FFF;
+    padding: 15px 10px;
+    margin-top: 40px;
+    float: left;
+    width: 100%;
+}
+
+.seat-cell.seat-empty.seat-used.seat-normal {
+    background-image: url(../image/seat-unselect-normal.png);
+    background-size: cover;
+}
+
+.seat-empty.seat-used {
+    color: #494c62 !important;
+}
+
+.seat-used {
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    background-position: center;
+    font-family: SFProText;
+    font-weight: 600;
+}
+
+.seat-empty.seat-used.seat-double {
+    background-image: url(../image/seat-unselect-double.png);
+}
+
+.seat-double-hidden {
+    display: none !important;
+}
+
+.seat-used.seat-double {
+    width: 90px !important;
+    background-size: 60px 30px;
+}
+
+#screen-form .seat-cell {
+    width: 40px;
+    /* float: left; */
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 11px;
+}
+
+.seat-double.seat-select {
+    background-image: url(../image/seat-select-double.png) !important;
+}
+
+.seat-vip.seat-select {
+    background-image: url(../image/seat-select-vip.png) !important;
+}
+
+.seat-normal.seat-select {background-image: url(../image/seat-select-normal.png) !important;}
+
+.seat-cell.seat-empty.seat-used.seat-vip {
+    background-image: url(../image/seat-unselect-vip.png);
+}
+
+#screen-form .seat-for-way {
+    /* background-color: #333333 !important; */
+    text-indent: -99999px;
+}
+
+.seat-cell.seat-for-way.seat-vip {
+}
+
+#screen-form .full-width {
+    text-align: center;
+}
+
+.seat-diagram {
+    float: left;
+}
+
+.screen-seat {
+    margin-top: 20px !important;
+    width: 100%;
+    float: left !important;
+    /* position: relative; */
+    min-height: 1px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+img.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.note-seat-status .seat-status {
+    width: 18.75%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+.note-seat-status .seat-status:first-child {
+    padding-left: 30px;
+}
+
+.note-seat-status {
+    width: 100%;
+    float: left;
+}
+
+.blink {
+    padding: 10px !important;
+}
+
+.blink.blink-white {
+    background-color: rgb(243, 230, 192) !important;
+}
+
+.link-title a:hover {
+    text-decoration: underline;
+}
+
+.color1 {
+    color: #03599d !important;
+}
+
+h3 {
+    font-family: Oswald !important;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 23px;
+    line-height: 1.5em;
+}
+
+.bold {
+    font-weight: 700 !important;
+}
+
+.item-outer {
+    font-size: 20px;
+    color: rgb(73,76,98);
+    margin-top: 14px;
+    margin-bottom: 8px;
+    float: left;
+    width: 100%;
+}
+
+.panel-show-seat h3 {
+    font-family: Oswald !important;
+    line-height: 1.5em;
+    font-size: 23px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.panel-show-seat .link-title {
+    margin-bottom: 35px !important;
+}
+
+.panel-show-seat {
+    width: 760.63px;
+    margin-bottom: 35px !important;
+    /* float: left; */
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.content {
+    height: 1005px !important;
+}
+
+.plus-width-content {
+    height: 2200px !important;
+}
+
+.voucher-plus-width-content {
+    height: 2400px !important;
+}
+
+.point-plus-width-content {
+    height: 2450px !important;
+}

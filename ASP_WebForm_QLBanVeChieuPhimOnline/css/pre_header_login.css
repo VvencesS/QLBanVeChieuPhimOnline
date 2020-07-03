@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pre-header .close-left {
+    display: none;
+}
+
+i.fas.fa-sign-out-alt {
+    font-size: 15px;
+    line-height: 20px;
+    padding-top: 3px;
+}
+
+span.username:hover {
+    text-decoration: underline;
+}
+
+.login .profile-menu > li > a {
+    padding: 8px 14px;
+    color: #555;
+    font-weight: 300;
+    line-height: 18px;
+    display: block;
+    font-size: 14px;
+}
+
+.login > li > ul > li > a:hover {
+    text-decoration: none !important;
+    background: #afa9a9;
+}
+
+.login > li > a {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    line-height: 25px;
+}
+
+ul.login > li {
+    float: left;
+    display: block;
+    position: relative;
+}
+
+.login > li:hover {
+    text-decoration: none !important;
+}
+
+.login > li > ul > li {
+    display: block;
+}
+
+.login > li > ul > li:hover {
+    text-decoration: none !important;
+}
+
+.divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background: #f1f3f6;
+}
+
+.login > li > ul > li:first-child {
+    border: none;
+}
+
+ul.profile-menu {
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    left: auto;
+    margin-top: 5px;
+    min-width: 175px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px rgba(102, 102, 102, 0.1);
+    border: 1px solid #eee;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 9px 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+ul.dropdown-menu.profile-menu {}
+
+ul.open-profile-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+ul.login {
+    padding-right: 10px !important;
+    float: right !important;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.pre-header .logined {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}

@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SuatChieuDacBiet.ascx.cs" Inherits="ASP_WebForm_QLBanVeChieuPhimOnline.cms.display.QuanLyPhim.DanhSachPhim.SuatChieuDacBiet" %>
+suất chiếu đặc biệt

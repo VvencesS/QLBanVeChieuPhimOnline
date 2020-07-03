@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content .container{
+    width: 1150px;
+    margin: auto;
+    padding: 60px;
+    display: flex;
+}
+.content .container .info{
+    width: 545px;
+    height: 96px !important;
+    padding: 0 30px;
+}
+.content {
+    height: 1800px;
+}
+.content .container .info .title h1{font-size: 28px;}
+.content .container .info .title .nut{display: flex;height: 20px !important;font-size: 11px;}
+.content .container .info .title .nut .like i{color: white;}
+.content .container .info .title .nut .like{
+    width: 66px !important;
+    line-height: 20px;
+    background-color: #1878f3;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.content .container .info .title .nut .share{
+    width: 66px;
+    line-height: 20px;
+    background-color: #1878f3;
+    margin-left: 5px;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.content .container .info .title .nut .nut-content{
+    line-height: 20px;
+    margin-left: 5px;
+}
+.content .container .info .title{
+    height: 96px !important;
+}
+.content .container .info .text-content{}
+.content .container .info .text-content p{
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: 10px;
+}
+.content .container .info .text-content > img{
+    width: 545px;
+    margin-top: 10px;
+}
+.content .container .info .text-content .map{
+    width: 480px;
+    margin: auto;
+    display: block;
+    margin-top: 10px;
+}
+.content .container .popular .title{
+    font-size: 33px;
+    line-height: 55px;text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+.content .container .popular .main-content{
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content .container .popular .main-content .film-hot{
+    width: 242px;
+    padding: 0 15px 15px 15px;
+    height: 458px;
+    position: relative;
+}
+.content .container .popular .main-content .film-hot::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px; 
+    width: 242px;
+    height: 383px;
+    background-image:  url();
+    border-radius: 20px;
+}
+.content .container .popular .main-content .film-hot img{
+    width: 242px;
+    border-radius: 20px;
+}
+.content .container .popular .main-content .film-hot a{
+    font-size: 17px;
+    line-height: 26px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.content .container .popular .main-content .film-hot a:hover {
+    text-decoration: underline;
+}

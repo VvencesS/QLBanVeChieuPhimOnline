@@ -1,0 +1,154 @@
+.slide-panel {
+    width: 100%;
+    height: 494.02px;
+    margin-bottom: 35px !important;
+}
+
+.slide-panel .nut {
+    width: 100%;
+    text-align: center;
+}
+
+.slide-panel ul {
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+}
+
+.slide-panel .nut li {
+    list-style: none;
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background: #ffffff7a;
+    border-radius: 50%;
+    border: 1px solid #ffffff7a;
+    text-indent: -9999px;
+    cursor: pointer;
+    z-index: 4;
+    transition: 0.4s;
+}
+
+.slide-panel li.trang {
+    background: none;
+    border: 1px solid #fffdfd;
+}
+
+.slide-panel .nut li:hover {
+    background: #fff;
+}
+
+.slide-panel .next {position: absolute;top: 45%;right: 2%;font-size: 50px;color: #ffffffa1;z-index: 4;cursor: pointer;}
+
+.slide-panel .next:hover {
+    color: #fff;
+}
+
+.slide-panel .prev {
+    position: absolute;
+    top: 45%;
+    left: 2%;
+    font-size: 50px;
+    color: #ffffffa1;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.slide-panel .prev:hover {
+    color: #fff;
+}
+
+.slide-panel .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slide-panel .anhslide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-panel .beta {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/*Hiệu ứng slide*/
+.slide-panel .slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+.slide-panel .slide.nextimg {
+	animation: nextimg 1s forwards;
+}
+
+@-webkit-keyframes nextimg{
+	0%{
+		transform: translateX(0%);
+		opacity: 1;
+    	visibility: visible;
+	}
+	100%{
+		transform: translateX(-100%);
+		opacity: 0;
+    	visibility: hidden;
+	}
+}
+
+.slide-panel .slide.nextimg2 {
+	animation: nextimg2 1s forwards;
+}
+
+@-webkit-keyframes nextimg2 {
+	0%{
+		transform: translateX(100%);
+		opacity: 0;
+    	visibility: hidden;
+	}
+	100%{
+		transform: translateX(0%);
+		opacity: 1;
+    	visibility: visible;
+	}
+}
+
+.slide-panel .slide.previmg {
+	animation: previmg 1s forwards;
+}
+
+@-webkit-keyframes previmg{
+	0%{
+		transform: translateX(0%);
+		opacity: 1;
+    	visibility: visible;
+	}
+	100%{
+		transform: translateX(100%);
+		opacity: 0;
+    	visibility: hidden;
+	}
+}
+
+.slide-panel .slide.previmg2 {
+	animation: previmg2 1s forwards;
+}
+
+@-webkit-keyframes previmg2 {
+	0%{
+		transform: translateX(-100%);
+		opacity: 0;
+    	visibility: hidden;
+	}
+	100%{
+		transform: translateX(0%);
+		opacity: 1;
+    	visibility: visible;
+	}
+}

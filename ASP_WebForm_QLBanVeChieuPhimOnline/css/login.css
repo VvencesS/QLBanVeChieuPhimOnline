@@ -1,0 +1,197 @@
+.content {height: 600px !important;}
+.content .container{
+    width: 1150px;
+    padding-bottom: 50px;
+}
+.content .container .body-content{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.content .container .body-content ul{
+    list-style: none;
+}
+.content .container .body-content ul li{
+    display: inline-block;
+    margin: 0 auto;
+}
+.content .container .body-content ul .text-center a{
+    color: #000;
+    font-size: 14px;
+    padding: 10px 116px;
+    border-bottom: solid 1px #ccc;
+    text-transform: uppercase;
+} 
+#login a{
+    background-color: #337ab7;
+}
+
+.body-content > ul > li > a {/* background-color: #f8f8f8 !important; */}
+#register a{
+    background-color: #f8f8f8;
+}
+.content .container .body-content .tab-content{
+    font-family: 'Source Sans Pro', sans-serif !important;
+    background-color: #fff !important;
+    font-size: 16px !important;
+    margin-top: 50px;
+    position: relative;
+}
+
+.tab-register .captcha img.pull-left {height: 28px;}
+
+.tab-register .captcha a.pull-left {
+    padding-top: 10px;
+}  
+.content .container .body-content .tab-content .tab-login{
+    opacity: 1;
+    position: absolute;
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+.form-group{
+    margin-bottom: 15px;
+    width: 95%;
+    margin: 0 auto;
+}
+.content .container .body-content .tab-content .tab-login .form-group .email .control-label{
+    margin-top: 1px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.email .input-icon{
+    position: relative;
+}
+.input-icon >i {
+    position: absolute;
+    color: #ccc;
+    display: block;
+    margin: 8px 2px 4px 10px;
+    z-index: 3;
+}
+.input-icon > .form-control{
+    padding-left: 33px;
+}
+.form-control{
+    border-color: #dbdbdb;
+    color: #777;
+    padding-left:33px;
+    display: block;
+    width: 93%;
+    height: 20px;
+    padding: 7px 0px;
+    border: 1px solid #e5e5e5;
+    margin: 5px 0px;
+}
+.forget-pass a{
+    color: #337ab7;
+}
+.forget-pass{
+    padding: 15px 0;
+}
+.tab-login .pull-left{
+    float: left;
+    padding-top: 10px;
+}
+.tab-login img.pull-left {
+    width:37% ;
+}
+ .pull-left i{
+    font-size: 30px;
+    color:#337ab7 ;
+    padding-left: 15px;
+}
+.maxacthuc{
+    width: 50%;
+    float: right;   
+}
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-radius: 4px !important;
+    border-width: 0px;
+}
+.btn1{
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #fc3606 0%, #fda085 51%, #fc7704 100%);
+    transition: all .5s;
+    color: #fff !important;
+    margin-top: 30px;
+    margin-left: 150px;
+}
+
+.btn1:hover {
+    background-image: linear-gradient(to right, #fc7704 0%, #fda085 51%, #fc3606 100%);
+    background-size: 100% auto;
+}
+.form-group .text-center{
+    text-align: center;
+    padding: 15px 0;
+    display: inline-block;
+}
+.btn1:hover{
+    color: black;
+    scale: 1;
+}
+.btn2{
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #0a64a7 0%, #258dcf 51%, #3db1f3 100%) !important;
+    color: #fff !important;
+    margin-left: 150px;
+}
+
+.btn2:hover {
+    background-size: 100% auto;
+    background-image: linear-gradient(to right, #3DB1F4 0%, #258dcf 51%, #0a64a7 100%) !important;
+}
+.tab-content .tab-register{
+    opacity: 0;
+    width: 100%;
+}
+.tab-register .form-group{
+    display: flex; 
+}
+.tab-register .form-group span{
+    color: red;
+}
+.tab-register .form-group .name{
+    width: 40%;
+}
+.tab-register .form-group .email{
+    padding-left: 13%;
+    width: 40%;
+}
+.tab-register .form-group .pass{
+    width: 40%;
+}
+.tab-register .form-group .re-pass{
+    width: 40%;
+    padding-left: 13%;
+}
+.tab-register .form-group .date{
+    width: 40%;
+}
+.tab-register .form-group .sex{
+    padding-left: 13%;
+}
+.tab-register .form-group .sex .input-icon select{
+    height: 36px;
+    width: 238px;
+}
+.tab-register .form-group .captcha img.pull-left{
+    padding-top: 11px;
+}
+.tab-register .form-group .maxacthuc{
+    padding-left: 17%;
+    width: 38%;
+}
+.tab-register .form-group .camket span{
+    color: #333333;
+}
+.tab-register .form-group .btn{
+    margin: 10px auto;
+}

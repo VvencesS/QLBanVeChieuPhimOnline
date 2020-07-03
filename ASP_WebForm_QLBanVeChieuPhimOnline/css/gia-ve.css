@@ -1,0 +1,36 @@
+
+.content .container{width: 1140px;margin: auto;}
+.content .container h1{width: 100%;font-family: Oswald !important;line-height: 1.5em;font-size: 27px;font-weight: 300;text-transform: uppercase;margin-top: 40px;}
+.content .container .nut{display: flex;font-size: 11px;}
+
+.content {
+    height: 3100px !important;
+}
+.content .container .nut .like i{color: white;}
+.content .container .nut .like{
+    width: 66px;
+    line-height: 20px;
+    background-color: #1878f3;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.content .container .nut .share{
+    width: 66px;
+    line-height: 20px;
+    background-color: #1878f3;
+    margin-left: 5px;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.content .container .nut .text-content{
+    line-height: 20px;
+    margin-left: 5px;
+}
+
+.content .container >img{width: 1140px;margin: 30px 0;}

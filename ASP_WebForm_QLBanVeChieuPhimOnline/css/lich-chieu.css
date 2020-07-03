@@ -1,0 +1,90 @@
+.content{
+    width: 100%;
+    background-color: #f8f8f8;
+}
+.content .container{
+    width: 1152px;
+    margin: auto;
+}
+.content .container .ct-title-menu{
+    display: flex;
+    width: 639.34px;
+    border-bottom: 1px solid #ddd;
+    margin-left: 235px;
+}
+.content .container .ct-title-menu a{
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: -1px;
+    padding: 10px;
+    color: #000;
+    background: #f4f4f4;
+}
+
+.active_tab {
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
+    border-image-slice: 1;
+    background: #f8f8f8 !important;
+    color: #03599d !important;
+}
+
+
+.container .layout-film{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .layout-film .film{
+    width: 228px;
+    height: 575px;
+    padding: 0px 30px 30px 30px;
+}
+
+.container .layout-film .film .film-avt {
+    position: relative;
+}
+.container .layout-film .film .film-avt img{
+    width: 228px;
+    height: 360px;
+    border-radius: 15px;
+}
+.container .layout-film .film .film-detail{}
+.container .layout-film .film .film-detail h1{
+    font-size: 18px;
+    padding: 10px 0;
+    letter-spacing: -1px;
+    color: #337ab7;
+}
+
+.container .layout-film .film .film-detail h1:hover {
+    text-decoration: underline;
+}
+.container .layout-film .film .film-detail .f12 b{
+    font-size: 15px;
+    line-height: 20px;
+}
+.container .layout-film .film .film-detail .f12{
+    font-size: 15px;
+    line-height: 20px;
+}
+.container .layout-film .film .film-detail .date-film{
+    color: #000;
+}
+.container .layout-film .film .btn{
+    display: block;
+    line-height: 36px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #0a64a7 0%, #258dcf 51%, #3db1f3 100%) !important;
+    background-size: 200% auto;
+    color: #fff !important;
+}
+
+.container .layout-film .film .btn:hover {
+    background-image: linear-gradient(to right, #3db1f3 0%, #258dcf 51%, #3db1f3 100%) !important;
+}

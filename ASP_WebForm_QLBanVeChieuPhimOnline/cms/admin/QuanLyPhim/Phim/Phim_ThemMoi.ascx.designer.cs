@@ -174,7 +174,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyPhim.Phim
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbNoiDung;
+        protected global::CKEditor.NET.CKEditorControl tbNoiDung;
 
         /// <summary>
         /// tbTrailer control.
@@ -183,16 +183,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.admin.QuanLyPhim.Phim
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbTrailer;
-
-        /// <summary>
-        /// RequiredFieldValidator4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        protected global::CKEditor.NET.CKEditorControl tbTrailer;
 
         /// <summary>
         /// cbThemNhieuPhim control.

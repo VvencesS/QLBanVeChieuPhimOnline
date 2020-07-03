@@ -81,7 +81,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
                 "tb_Phong.MaPhong,tb_LoaiGhe.MaLoaiGhe,tb_TrangThai.MaTrangThai " +
               "FROM[dbo].[tb_Ghe] " +
               "INNER JOIN tb_Phong ON tb_Phong.MaPhong = tb_Ghe.MaPhong " +
-              "INNER JOIN tb_LoaiGhe ON tb_LoaiGhe.MaLoaiGhe = tb_Ghe.MaPhong " +
+              "INNER JOIN tb_LoaiGhe ON tb_LoaiGhe.MaLoaiGhe = tb_Ghe.MaLoaiGhe " +
               "INNER JOIN tb_TrangThai ON tb_TrangThai.MaTrangThai = tb_Ghe.MaTrangThai");
             cmd.CommandType = CommandType.Text;
             return SQLDatabase.GetData(cmd);

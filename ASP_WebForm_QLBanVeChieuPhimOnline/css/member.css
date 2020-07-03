@@ -1,0 +1,286 @@
+.content{
+    width: 100%;
+    height: 715px;
+    margin: 30px auto;
+}
+.content .container{
+    width: 1120px;
+}
+.content .container .row .body-content ul{
+    list-style: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.body-content > ul > li > a {
+    color: #000;
+}
+
+.content .container .row .body-content ul .text-center{
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+/* -----TAB-CONTENT----- */
+.body-content .tab-content{
+    padding: 30px 20px;
+    position: relative;
+    background: #fff;
+    width: 1081px;
+}
+
+.body-content .tab-content .tab-pane{
+    width: 100%;
+}
+/* --------TAB-INFO----------- */
+#info{
+    background: #337ab7;
+}
+#info a{
+    color: white;
+}
+#tab-info{
+    display: block;
+}
+.tab-pane .avatar{
+    display: flex;
+}
+.tab-pane .avatar .edit{
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.tab-pane .avatar .edit .upload{
+    background-color: #e5e5e5;
+    padding: 5px 15px;  
+    cursor: pointer;
+}
+
+.avatar .upload:hover {
+    background-color: #cac7c7 !important;
+}
+.tab-pane .avatar .edit .saved{
+    background-color:   #44b6ae;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.avatar .edit .saved:hover {
+    background-color: #23968e !important;
+}
+.tab-pane .form-group{
+    width: 100%;
+    padding-top: 15px;
+    display: flex;
+    font-family: "Open Sans", sans-serif !important;
+}
+.tab-pane .form-group span{
+    color: red;
+}
+.tab-pane .form-group .control-label{
+    font-size: 16px;
+}
+.input-icon{
+    position: relative;
+}
+.input-icon > i{
+    position: absolute;
+    color: #ccc;
+    display: block;
+    margin: 12px;
+    z-index: 3;
+}
+.input-icon > .form-control{
+    padding-left: 33px;
+}
+.form-control{
+    display: block;
+    width: 88%;
+    height: 18px;
+    padding: 6px 12px;
+}
+
+.name .form-control {
+    width: 92%;
+}
+.form-group .name
+{
+    width: 50%;
+}
+.form-group .email{
+    width: 50%;
+}
+.form-group .SDT{
+    width: 50%;
+}
+.form-group .CMND{
+    width: 50%;
+}
+.form-group .date{
+    width: 50%;
+}
+.form-group .sex{
+    width: 50%;
+}
+.city .form-control{
+    height: 34px;
+    width: 97%;
+}
+.city .input-icon >.form-control{
+    padding-left: 0px;
+}
+.sex .form-control{
+    height: 34px;
+    width: 97%;
+}
+.country .form-control{
+    height: 34px;
+    width: 97%;
+}
+.country .input-icon >.form-control{
+    padding-left: 0px;
+}
+.form-group .city{
+    width: 50%;
+}
+.form-group .country{
+    width: 50%;
+}
+.form-group  .address{
+    width:100%;
+}
+#txtDiaChi{
+    height: 55px;
+    width: 96%;
+}
+.forget-pass{
+    padding-top: 20px
+}
+.forget-pass a{
+    color: #337ab7;
+    font-size: 16px;
+}
+.form-group .text-center {
+    margin: 0 auto;
+    
+}
+.btn {
+    background-image: linear-gradient(to right, #0a64a7 0%, #258dcf 51%, #3db1f3 100%) !important;
+    padding:10px 40px;
+    border-radius: 4px;
+    background-size: 200% auto;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-width: 0px;
+    color: #fff !important;
+}
+
+.tab-content > .tab-pane > .form-group > .text-center > .btn:hover {
+    background-image: linear-gradient(to right, #3DB1F4 0%, #258dcf 51%, #0a64a7 100%) !important;
+    background-size: 100% auto;
+}
+
+/* --------TAB CARD MEMBER------------ */
+#tab-card-member{
+    display: none;
+}
+.table-responsive table {
+    border: solid 1px #ddd;
+    width: 100%;
+    margin-bottom: 20px;
+    border-spacing: 0px;
+    border-collapse: 0px;
+}
+.text-uppercase{
+    border: solid 1px #ddd;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    padding: 8px;
+}
+.table-responsive table tbody tr td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    vertical-align: top;
+    background-color: #F1F1F1;
+}
+.bold{
+    font-weight: 700;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.progress{
+    height: 20px;
+    background-color:#F1F1F1 ;
+}
+.progress-bar{
+    width: 4%;
+    background-color: #337ab7;
+    float: left;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+}
+.vip .row{
+    display: flex;
+    width: 100%;
+}
+.min{
+    width: 50%;
+    float: left;
+}
+.max{
+    width: 50%;
+    text-align: right;
+}
+/* ----TAB-HISTORY ------------- */
+#tab-history{
+    display: none;
+}
+.table-responsive  table tbody tr td img{
+    width: 50%;
+    float: left;
+    padding-right: 5px;
+}
+/* ------TAB-POINT------- */
+#tab-point{
+    width: 100%;
+    display: none;
+}
+.form h2{
+    font-size: 24px;
+    color: #03599d;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding-top: 10px;
+}
+.mybetapoint .form{
+    display: flex;
+}
+.form-left{
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    padding-left: 15px;
+    width: 25%;
+    padding-bottom: 10px;
+}
+.form-right{
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    padding-left: 15px;
+    width: 25%;
+    padding-bottom: 10px;
+}
+.mybetapoint .table-responsive {
+    padding-top: 10px;
+}
+/* ---------TAB VOUCHER-------- */
+#tab-voucher{
+    display: none;
+}

@@ -1,0 +1,209 @@
+
+.content .container{
+    width: 1120px;
+}
+.content .container > .title {
+    width: 1120px;
+    display: flex;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+}
+
+.content {
+    height: 1630px !important;
+}
+.content .container .title span{
+    padding: 0 10px;
+    font-size: 23px;
+    line-height: 35px;
+}
+.content .container .title a{
+    display: flex;
+    font-size: 23px;
+    line-height: 35px;
+}
+.content .container .main-content{
+    margin-top: 30px;
+    display: flex;
+}
+.content .container .main-content .avt img{
+    width: 258px;
+    margin: 0 15px;
+    border-radius: 15px;
+}
+.content .container .main-content .details{
+    padding: 0 15px;
+    position: relative;
+    min-height: 1px;
+    color: #333;
+    }
+.content .container .main-content .details h1{
+    font-size: 33px;
+    font-family: Oswald !important;
+    line-height: 1.5em;
+    font-weight: 700 !important;
+}
+.content .container .main-content .details p{
+    font-size: 18px;
+    line-height: 26px;
+    padding: 15px 0;
+    font-family: SourceSansPro !important;
+    text-align: justify;
+}
+.content .container .main-content .details .laichiacot{display: flex;font-family: SourceSansPro !important;font-size: 18px;}
+.content .container .main-content .details .laichiacot .trai div{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+}
+.content .container .main-content .details .laichiacot .phai div{
+    font-size: 18px;
+    line-height: 26px;
+    padding: 0 15px;
+    margin-left: 50px;
+}
+.content .container .lich{
+
+width: 100%;
+
+margin-top: 10px;
+
+border-bottom: 1px solid #ccc;
+
+position: relative;
+
+min-height: 1px;
+}
+.content .container .lich ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    background: #08080800 !important;
+}
+
+.lich li.active-lich a {
+    color: #03599d !important;
+}
+
+.lich li.active-lich {
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
+    border-image-slice: 1;
+}
+.content .container .lich ul li span{
+    font-size: 38px;
+}
+.content .container .lich ul li a{
+    font-size: large;
+    margin: 0 20px;
+    color: #000;
+}
+.content .container .time{}
+.content .container .time .title{
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.content .container .time .timer{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content .container .time .timer .time1{
+    width: 113px;
+    padding: 0 15px;
+}
+.content .container .time .timer .time1 .clock{
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    width: 85px;
+    padding: 5px 14px;
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.content .container .time .timer .time1 .clock:hover {
+    background-color: #bbbbbb;
+}
+.content .container .time .timer .time1 .detail{
+    text-align: center;
+    margin-top: 5px;
+}
+.content .container .nut{display: flex;margin-top: 15px;font-size: 11px;}
+
+.fullwidthbanner-container {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3c3e4d;
+    display: block;
+    margin-top: 30px;
+    z-index: 98;
+}
+
+.fullwidthbanner-container .text-center {
+    text-align: center;
+}
+
+.fullwidthbanner-container .col-md-offset-2 {
+    width: 75%;
+    margin: auto;
+}
+
+.fullwidthbanner-container > .text-center {
+}
+
+.fullwidthbanner-container .text-center .tab-films {
+    display: inline-block;
+    margin-bottom: 30px;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.fullwidthbanner-container h1 {
+    font-family: Oswald !important;
+    line-height: 1.5em;
+    font-size: 33px;
+    font-weight: 700 !important;
+    margin-bottom: 10px;
+}
+
+.fullwidthbanner-container li.active {
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
+    border-image-slice: 1;
+}
+
+.fullwidthbanner-container > .text-center {
+    margin-top: 20px !important;
+}
+.content .container .nut .like i{color: white;}
+.content .container .nut .like{
+    width: 66px;
+    line-height: 20px;
+    background-color: #1878f3;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.content .container .nut .share{
+    width: 66px;
+    line-height: 20px;
+    background-color: #1878f3;
+    margin-left: 5px;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.content .container .nut .content1{
+    line-height: 20px;
+    margin-left: 5px;
+}

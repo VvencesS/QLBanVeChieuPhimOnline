@@ -36,7 +36,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         /// <param name="maXaPhuong"></param>
         public static void Rap_Inser(string anhDaiDien, string tenRap, string gioiThieu, string diaChi, string sdtRieng, int maXaPhuong)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_Rap] (AnhDaiDien,[TenRap],[GioiThieu],DiaChi,[SDTRieng],[MaXaPhuong]) VALUES(@tenRap,@gioThieu,@sdtRieng,@maXaPhuong)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[tb_Rap] (AnhDaiDien,[TenRap],[GioiThieu],DiaChi,[SDTRieng],[MaXaPhuong]) VALUES(@tenRap,@gioiThieu,@sdtRieng,@maXaPhuong)");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@anhDaiDien", anhDaiDien);
             cmd.Parameters.AddWithValue("@tenRap", tenRap);
@@ -61,7 +61,7 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
         public static void Rap_Update(int maRap, string anhDaiDien, string tenRap, string gioiThieu, string diaChi, string sdtRieng, int maXaPhuong)
         {
             SqlCommand cmd = new SqlCommand("UPDATE[dbo].[tb_Rap] "+
-               "SET AnhDaiDien=@anhDaiDien" +
+               "SET AnhDaiDien=@anhDaiDien " +
                ",[TenRap] = @tenRap "+
                "  ,[GioiThieu] = @gioiThieu" +
                ",DiaChi=@diaChi"+
