@@ -24,6 +24,10 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.display.QuanLyPhim
                     plLoadControl.Controls.Add(LoadControl("DanhSachPhim/DanhSachPhimLoadControl.ascx"));
                     break;
 
+                case "XemTrailer":
+                    plLoadControl.Controls.Add(LoadControl("XemTrailer.ascx"));
+                    break;
+
                 default:
                     plLoadControl.Controls.Add(LoadControl("DanhSachPhim/DanhSachPhimLoadControl.ascx"));
                     break;

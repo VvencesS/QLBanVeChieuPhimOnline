@@ -116,5 +116,24 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyLichChieu
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        #region Phương thức lấy ra danh sách tất cả Rạp theo tỉnh thành phố
+        /// <summary>
+        /// Phương thức lấy ra danh sách tất cả Rạp theo tỉnh thành phố
+        /// </summary>
+        /// <param name="tenTinhThanhPho"></param>
+        /// <returns></returns>
+        public static DataTable Thongtin_Rap_TenTTP(string tenTinhThanhPho)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT [MaRap],AnhDaiDien,[TenRap],[GioiThieu],DiaChi,[SDTRieng],tb_XaPhuong.TenXaPhuong,tb_QuanHuyen.TenQuanHuyen,tb_TinhThanhPho.TenTinhThanhPho " +
+              "FROM[dbo].[tb_Rap] " +
+              "INNER JOIN tb_XaPhuong ON tb_XaPhuong.MaXaPhuong = tb_Rap.MaXaPhuong " +
+              "INNER JOIN tb_QuanHuyen ON tb_QuanHuyen.MaQuanHuyen = tb_XaPhuong.MaQuanHuyen " +
+              "INNER JOIN tb_TinhThanhPho ON tb_TinhThanhPho.MaTinhThanhPho = tb_QuanHuyen.MaTinhThanhPho " +
+              "WHERE tb_TinhThanhPho.TenTinhThanhPho=@tenTinhThanhPho");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@tenTinhThanhPho", tenTinhThanhPho);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
     }
 }

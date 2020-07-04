@@ -38,19 +38,21 @@
                                     <img src="image/united-kingdom.png" alt=""/>
                                 </a>
                             </div>
-
+                            <asp:PlaceHolder ID="plChuaDangNhap" runat="server">
                             <ul class="left" style="margin-bottom: 4px; margin-top: 4px">
                                 <li><a href="Default.aspx?modul=QLTaiKhoan&submodul=DNDK&thirdmodul=DangNhap">Đăng nhập</a></li>
                                 <li style="border-left: 1px solid; padding-left: 10px !important">
                                     <a href="Default.aspx?modul=QLTaiKhoan&submodul=DNDK&thirdmodul=DangKy">Đăng ký</a>
                                 </li>
                             </ul>
+                                </asp:PlaceHolder>
 
+                            <asp:PlaceHolder ID="plDaDangNhap" runat="server" Visible="False">
                             <!-- Login -->
                             <ul class="login">
                                 <li class="dropdown-user">
                                     <a href="Default.aspx?modul=QLTaiKhoan&submodul=ThongTinTK" style="padding: 2px; background-color: transparent;">
-                                        <span class="username">Xin chào: Trần Đức Soạn </span>
+                                        <span class="username">Xin chào: <asp:Literal ID="ltrTenTV" runat="server"></asp:Literal></span>
                                         <i class="fa fa-angle-down"></i>
                                     </a>
                                     <ul class="dropdown-menu profile-menu">
@@ -60,28 +62,13 @@
                                         </li>
                                         <li class="divider"></li>
                                         <li>
-                                            <a href="#">
-                                                <i class="far fa-gem"></i>Thẻ thành viên</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li>
                                             <a href="Default.aspx?modul=QLTaiKhoan&submodul=ThongTinTK&thirdmodul=HanhTrinhDienAnh">
                                                 <i class="far fa-paper-plane"></i>Hành trình điện ảnh</a>
                                         </li>
                                         <li class="divider"></li>
                                         <li>
                                             <a href="#">
-                                                <i class="fas fa-map-marker-alt"></i>Điểm Beta</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-briefcase"></i>Voucher của tôi</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-sign-out-alt"></i>Đăng xuất</a>
+                                                <i class="fas fa-sign-out-alt"></i><asp:LinkButton ID="lbtDangXuat" runat="server" CausesValidation="False" OnClick="lbtDangXuat_Click">Đăng xuất</asp:LinkButton></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -92,6 +79,7 @@
                                     </a>
                                 </li>
                             </ul>
+                                </asp:PlaceHolder>
 
                         </div>
                     </div>
@@ -103,92 +91,15 @@
                             <a href="Default.aspx" class="site-logo">
                                 <img src="image/logo.png" style="height: 55px"/>
                             </a>
-
-                            <div class="top-cart-block">
-                                <ul>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle">Beta Mỹ Đình
-									<i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-
-                                            <li class="dropdown-submenu">
-                                                <a href="#">Hà Nội 
-                                        	<i class="fa fa-angle-right"></i>
-                                                </a>
-                                                <ul class="dropdown-menu sub-1">
-                                                    <li><a href="#">Beta Mỹ Đình</a></li>
-                                                    <li><a href="#">Beta Thanh Xuân</a></li>
-                                                    <li><a href="#">Beta Đan Phượng</a></li>
-                                                </ul>
-                                            </li>
-
-                                            <li class="dropdown-submenu">
-                                                <a href="#">An Giang 
-                                        	<i class="fa fa-angle-right"></i>
-                                                </a>
-                                                <ul class="dropdown-menu sub-2">
-                                                    <li><a href="#">Beta Long Xuyên</a></li>
-                                                </ul>
-                                            </li>
-
-                                            <li class="dropdown-submenu">
-                                                <a href="#">Bắc Giang 
-                                        	<i class="fa fa-angle-right"></i>
-                                                </a>
-                                                <ul class="dropdown-menu sub-3">
-                                                    <li><a href="#">Beta Bắc Giang</a></li>
-                                                </ul>
-                                            </li>
-
-                                            <li class="dropdown-submenu">
-                                                <a href="#">Đồng Nai 
-                                        	<i class="fa fa-angle-right"></i>
-                                                </a>
-                                                <ul class="dropdown-menu sub-4">
-                                                    <li><a href="#">Beta Biên Hòa</a></li>
-                                                    <li><a href="#">Meci Long Khánh</a></li>
-                                                    <li><a href="#">Meci Long Thành</a></li>
-                                                </ul>
-                                            </li>
-
-                                            <li class="dropdown-submenu">
-                                                <a href="#">Khánh Hòa 
-                                        	<i class="fa fa-angle-right"></i>
-                                                </a>
-                                                <ul class="dropdown-menu sub-5">
-                                                    <li><a href="#">Beta Nha Trang</a></li>
-                                                </ul>
-                                            </li>
-
-                                            <li class="dropdown-submenu">
-                                                <a href="#">Thái Nguyên 
-                                        	<i class="fa fa-angle-right"></i>
-                                                </a>
-                                                <ul class="dropdown-menu sub-6">
-                                                    <li><a href="#">Beta Thái Nguyên</a></li>
-                                                </ul>
-                                            </li>
-
-                                            <li class="dropdown-submenu">
-                                                <a href="#">Thanh Hóa 
-                                        	<i class="fa fa-angle-right"></i>
-                                                </a>
-                                                <ul class="dropdown-menu sub-7">
-                                                    <li><a href="#">Beta Thanh Hóa</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
+                            <asp:Literal ID="ltrDSRap" runat="server"></asp:Literal>
+                            
 
                             <!-- Begin header-navigation -->
                             <div class="header-navigation">
                                 <ul>
-                                    <li>
+                                    <%--<li>
                                         <a href="Default.aspx?modul=QLLichChieu&submodul=LichChieuTheoRap">LỊCH CHIẾU THEO PHIM</a>
-                                    </li>
+                                    </li>--%>
                                     <li>
                                         <a href="Default.aspx?modul=QLPhim&submodul=DanhSachPhim">PHIM</a>
                                     </li>
@@ -201,9 +112,9 @@
                                     <li>
                                         <a href="Default.aspx?modul=QLTTVaQC">TIN MỚI VÀ ƯU ĐÃI</a>
                                     </li>
-                                    <li>
+                                    <%--<li>
                                         <a href="#">VOUCHER MIỄN PHÍ</a>
-                                    </li>
+                                    </li>--%>
                                     <li>
                                         <a href="Default.aspx?modul=QLTaiKhoan&submodul=DNDK">THÀNH VIÊN</a>
                                     </li>
@@ -215,7 +126,7 @@
                     <!-- End header -->
 
                     <!-- Chọn rạp chiếu phim -->
-                    <div class="fancybox-container">
+                    <div class="fancybox-container" style="visibility:hidden;">
                         <div class="fancybox-bg"></div>
                         <div class="fancybox-content" style="width: 700px;">
                             <div class="close">
@@ -243,24 +154,6 @@
                                     <select id="cborap">
                                         <option value="0">Chọn rạp phim</option>
                                     </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Xem trailer phim -->
-                    <div class="fancybox-trailer">
-                        <div class="fancybox-main-trailer">
-                            <div class="close">
-                                <i class="fas fa-times"></i>
-                            </div>
-                            <div class="main-trailer">
-                                <div class="header-trailer">
-                                    <h3>TRAILER - <span class="tenphim">Mắt Biếc</span></h3>
-                                </div>
-                                <div class="video-trailer">
-                                    <iframe width="622px" height="350px" src="https://www.youtube.com/embed/rmtx2St_U_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <!-- <video src="video/Official Trailer - Mắt Biếc - Beta Cineplex - Khởi chiếu Tháng 12-2019.mp4" width="622px" height="350px"  autoplay="autoplay" controls="controls" preload="preload"></video> -->
                                 </div>
                             </div>
                         </div>

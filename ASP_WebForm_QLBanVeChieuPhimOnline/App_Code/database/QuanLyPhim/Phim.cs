@@ -132,6 +132,25 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyPhim
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        #region Phương thức lấy ra danh sách tất cả phim đang chiếu
+        /// <summary>
+        /// Phương thức lấy ra danh sách tất cả phim đang chiếu
+        /// </summary>
+        /// <returns></returns>
+        public static DataTable Thongtin_PhimDangChieu()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT TOP(12) [MaPhim],[TenPhim],[AnhDaiDien],tb_TheLoai.TenTheLoai,tb_QuocGia.TenQuocGia,[ThoiLuong],[KhoiChieu],[KetThuc],[DaoDien],[NoiDung],[Trailer],tb_DinhDang.TenDinhDang,tb_NhanVien.MaNhanVien,tb_HangPhim.TenHangPhim " +
+              "FROM[dbo].[tb_Phim] " +
+              "INNER JOIN tb_TheLoai ON tb_TheLoai.MaTheLoai = tb_Phim.MaTheLoai " +
+              "INNER JOIN tb_QuocGia ON tb_QuocGia.MaQuocGia = tb_Phim.MaQuocGia " +
+              "INNER JOIN tb_DinhDang ON tb_DinhDang.MaDinhDang = tb_Phim.MaDinhDang " +
+              "INNER JOIN tb_NhanVien ON tb_NhanVien.MaNhanVien = tb_Phim.MaNhanVien " +
+              "INNER JOIN tb_HangPhim ON tb_HangPhim.MaHangPhim = tb_Phim.MaHangPhim " +
+              "WHERE KhoiChieu < GETDATE()");
+            cmd.CommandType = CommandType.Text;
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
         #region Phương thức lấy ra phim theo mã
         /// <summary>
         /// Phương thức lấy ra phim theo mã

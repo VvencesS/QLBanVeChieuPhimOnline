@@ -80,5 +80,19 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTTVaQC
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        #region Phương thức lấy ra danh sách thông tin loại quảng cáo theo tên
+        /// <summary>
+        /// Phương thức lấy ra danh sách thông tin loại quảng cáo theo tên
+        /// </summary>
+        /// <param name="tenLoaiQuangCao"></param>
+        /// <returns></returns>
+        public static DataTable Thongtin_LoaiquangCao_by_TenLoaiQuangCao(string tenLoaiQuangCao)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[tb_LoaiQuangCao] WHERE TenLoaiQuangCao=@tenLoaiQuangCao");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@tenLoaiQuangCao", tenLoaiQuangCao);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
     }
 }

@@ -85,7 +85,8 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTTVaQC
         {
             SqlCommand cmd = new SqlCommand("SELECT [MaTinTuc],[AnhDaiDien],[TieuDe],[TomTatTin],[NoiDung],tb_LoaiTinTuc.[MaLoaiTinTuc],tb_LoaiTinTuc.TenLoaiTinTuc,[NgayThem] " +
                 "FROM[dbo].[tb_TinTuc] " +
-                "INNER JOIN tb_LoaiTinTuc ON tb_LoaiTinTuc.MaLoaiTinTuc = tb_TinTuc.MaLoaiTinTuc");
+                "INNER JOIN tb_LoaiTinTuc ON tb_LoaiTinTuc.MaLoaiTinTuc = tb_TinTuc.MaLoaiTinTuc " +
+                "ORDER BY NgayThem");
             cmd.CommandType = CommandType.Text;
             return SQLDatabase.GetData(cmd);
         }

@@ -13,5 +13,50 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.display.QuanLyPhim
 
     public partial class ChiTietPhim
     {
+
+        /// <summary>
+        /// ltrTenPhim control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrTenPhim;
+
+        /// <summary>
+        /// ltrChiTietPhim control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrChiTietPhim;
+
+        /// <summary>
+        /// ltrNgayChieu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrNgayChieu;
+
+        /// <summary>
+        /// ltrGioChieu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrGioChieu;
+
+        /// <summary>
+        /// ltrTrailer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrTrailer;
     }
 }

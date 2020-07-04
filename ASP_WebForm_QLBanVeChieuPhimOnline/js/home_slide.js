@@ -3,7 +3,7 @@ $(function() {
 	//Tự động chạy slide
 	thoigian = setInterval(function(){
 		$('.next').trigger('click');
-		console.log('Đã kích hoạt sự kiện click!');
+		//console.log('Đã kích hoạt sự kiện click!');
 	}, 3000);
 
 	//Sự kiện click nút next

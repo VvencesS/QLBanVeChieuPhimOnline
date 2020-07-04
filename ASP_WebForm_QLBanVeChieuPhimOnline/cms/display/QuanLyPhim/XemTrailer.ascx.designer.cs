@@ -7,38 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.display.QuanLyPhim.DanhSachPhim
+namespace ASP_WebForm_QLBanVeChieuPhimOnline.cms.display.QuanLyPhim
 {
 
 
-    public partial class DanhSachPhimLoadControl
+    public partial class XemTrailer
     {
 
         /// <summary>
-        /// ltrBannerL control.
+        /// ltrTenPhim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrBannerL;
+        protected global::System.Web.UI.WebControls.Literal ltrTenPhim;
 
         /// <summary>
-        /// ltrBannerR control.
+        /// ltrTrailer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrBannerR;
-
-        /// <summary>
-        /// plLoadControl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder plLoadControl;
+        protected global::System.Web.UI.WebControls.Literal ltrTrailer;
     }
 }

@@ -1,9 +1,9 @@
 $(document).ready(function () {
     $('#login').click(function () { 
-        $('.tab-login').css('opacity', "1");
-        $('.tab-register').css('opacity', "0");
-        $('.tab-register').css('visibility', "hidden");
-        $('.tab-login').css('visibility', "visible");
+        // $('.tab-login').css('opacity', "1");
+        // $('.tab-register').css('opacity', "0");
+        // $('.tab-register').css('visibility', "hidden");
+        // $('.tab-login').css('visibility', "visible");
         $("#register a").css("background","#f8f8f8");
         $("#login a").css("background","#337ab7");
         $("#login a").css("boder-bottom","solid 1px #555");
@@ -11,10 +11,10 @@ $(document).ready(function () {
         $("#login a").css("background","#337ab7 !important");
     });
     $('#register').click(function () { 
-        $('.tab-login').css("opacity", "0");
-        $('.tab-register').css("opacity", "1");
-        $('.tab-login').css('visibility', "hidden");
-        $('.tab-register').css('visibility', "visible");
+        // $('.tab-login').css("opacity", "0");
+        // $('.tab-register').css("opacity", "1");
+        // $('.tab-login').css('visibility', "hidden");
+        // $('.tab-register').css('visibility', "visible");
         $("#login a").css("background","#f8f8f8");
         $("#register a").css("background","#337ab7");
         $("#register a").css("boder-bottom","solid 1px #555");

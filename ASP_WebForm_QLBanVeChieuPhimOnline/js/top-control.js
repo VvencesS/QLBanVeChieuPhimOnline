@@ -2,7 +2,7 @@ $(function() {
 	$('#topcontrol').fadeOut(); //ẩn nút
 	$(window).scroll(function(){ 
 		var vitri = $(window).scrollTop();
-		console.log(vitri);
+		//console.log(vitri);
 		if (vitri >= 100) { //thực hiện lệnh điều kiện Khi lăn chuột xuống dưới hơn 100px
 			$('#topcontrol').fadeIn(); //Xuất hiện nút
 		} else {

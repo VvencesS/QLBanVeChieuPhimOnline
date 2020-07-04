@@ -45,6 +45,24 @@ namespace ASP_WebForm_QLBanVeChieuPhimOnline.App_Code.database.QuanLyTaiKhoan
             return SQLDatabase.GetData(cmd);
         }
         #endregion
+        #region Phương thức lấy ra Thành viên theo email
+        /// <summary>
+        /// Phương thức lấy ra Thành viên theo mã
+        /// </summary>
+        /// <returns></returns>
+        public static DataTable ThongTinThanhVienByEmail(string email)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT tb_ThanhVien.[MaThanhVien],tb_ThanhVien.AnhDaiDien,tb_ThanhVien.[HoTen],tb_ThanhVien.[Email],tb_ThanhVien.[PassWord],tb_ThanhVien.[Sdt]," +
+                "tb_ThanhVien.[SoThe],tb_ThanhVien.[NgaySinh],tb_ThanhVien.[GioiTinh],tb_ThanhVien.[TrangThai]," +
+                "tb_XaPhuong.TenXaPhuong, tb_QuanHuyen.TenQuanHuyen, tb_TinhThanhPho.TenTinhThanhPho,tb_XaPhuong.MaXaPhuong, tb_QuanHuyen.MaQuanHuyen, tb_TinhThanhPho.MaTinhThanhPho from [tb_ThanhVien] " +
+                "inner join tb_XaPhuong on tb_ThanhVien.MaXaPhuong = tb_XaPhuong.MaXaPhuong " +
+                "inner join tb_QuanHuyen on tb_QuanHuyen.MaQuanHuyen = tb_XaPhuong.MaQuanHuyen " +
+                "inner join tb_TinhThanhPho on tb_TinhThanhPho.MaTinhThanhPho = tb_QuanHuyen.MaTinhThanhPho where Email=@email");
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@email", email);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
         #region Phương thức lấy ra danh sách tất cả Thành viên
         /// <summary>
         /// Phương thức lấy ra danh sách tất cả Thành viên

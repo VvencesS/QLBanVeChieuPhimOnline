@@ -9,21 +9,21 @@ $(function () {
         //TweenMax.staggerFrom($('.row .film'),0.4,{opacity:0}, 0.4);
     });
     //Xem trailer phim
-    $('.film-img .play-trailer .view-trailer .fas').click(function (event) {
-        console.log("đã click play-trailer");
-        $('.fancybox-trailer').addClass('view-fancybox-trailer');
-        event.preventDefault();
-        $(window).scrollTop(500);
-        console.log("đã scroll: " + $(window).scrollTop(500));
-        $('body').css('overflow-y', 'hidden');
-    });
-    //Tắt fancybox xem trailer
-    $('.fancybox-trailer .fas.fa-times').click(function (event) {
-        $('.fancybox-trailer ').removeClass('view-fancybox-trailer');
-    });
-    $('.fancybox-trailer').click(function (event) {
-        $('.fancybox-trailer ').removeClass('view-fancybox-trailer');
-    });
+    // $('.film-img .play-trailer .view-trailer .fas').click(function (event) {
+    //     console.log("đã click play-trailer");
+    //     $('.fancybox-trailer').addClass('view-fancybox-trailer');
+    //     event.preventDefault();
+    //     $(window).scrollTop(500);
+    //     console.log("đã scroll: " + $(window).scrollTop(500));
+    //     $('body').css('overflow-y', 'hidden');
+    // });
+    // //Tắt fancybox xem trailer
+    // $('.fancybox-trailer .fas.fa-times').click(function (event) {
+    //     $('.fancybox-trailer ').removeClass('view-fancybox-trailer');
+    // });
+    // $('.fancybox-trailer').click(function (event) {
+    //     $('.fancybox-trailer ').removeClass('view-fancybox-trailer');
+    // });
 
     //Khi click vào Mua vé
     $('.btn-mua-ve').click(function (event) {
